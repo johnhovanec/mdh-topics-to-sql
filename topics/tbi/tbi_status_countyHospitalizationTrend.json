@@ -1,8 +1,8 @@
 {
-  "tabTitle": "County Mortality Trend",
-  "tabPath": "countyMortalityTrend",
+  "tabTitle": "County Hosp. Trend",
+  "tabPath": "countyHospitalizationTrend",
   "contentType": "chart",
-  "exportTitle": "Mean annual unadjusted Rate of TBI-related Mortality",
+  "exportTitle": "Mean annual unadjusted Rate of TBI-related Hospitalizations",
   "exportSubtitle": "Unadjusted rate per 100k population",
   "chartType": "trendline",
   "selectable": true,
@@ -11,11 +11,11 @@
   "defaultSetNames": ["stateRate"],
   "baseline": "000",
   "info": {
-    "title": "Rate of TBI Mortality",
-    "id": "chart-tbi-mortality-trend",
+    "title": "Rate of TBI Hospitalizations",
+    "id": "chart-tbi-hospitalizations-trend",
     "subtitle": "Age-adjusted rate per 10,000"
   },
-  "chartTitle": ["Mean Annual Unadjusted Rate of TBI-related Mortality"],
+  "chartTitle": ["Mean Annual Unadjusted Rate of TBI-related Hospitalizations"],
   "chartSubtitle": "",
   "displayChartTitle": true,
   "displayChartSubtitle": true,
@@ -28,13 +28,10 @@
   "chartDataSets": ["rate", "stateRate"],
   "url": "/TBI/GetThreeYearCrudeRateCI",
   "urlParams": [
-    {
-      "param": "jurisdiction",
-      "valueKey": "code"
-    },
+    { "param": "jurisdiction", "valueKey": "code" },
     {
       "param": "type",
-      "value": "TBI_Mortality_CrudeRate_3yr"
+      "value": "TBI_Hospitalizations_CrudeRate_3yr"
     }
   ],
   "chartConfig": {
@@ -122,5 +119,5 @@
       "headerAlign": "left"
     }
   ],
-  "tableTitle": "Mean Annual Unadjusted Rate of TBI-related Mortality"
+  "tableTitle": "Mean Annual Unadjusted Rate of TBI-related Hospitalizations"
 }

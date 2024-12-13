@@ -1,0 +1,56 @@
+{
+  "tabTitle": "Mortality",
+  "tabPath": "mortality",
+  "contentType": "map",
+  "contentTitle": "Mean Annual Unadjusted Rate of TBI-related Mortality",
+  "exportTitle": "Mean Annual Unadjusted Rate of TBI-related Mortality",
+  "exportSubtitle": "Unadjusted rate per 100k population (period)",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Mean annual unadjusted Rate of TBI-related Mortality",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "TBI-related mortality per 100,000 population",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-choropleth-tbi-mortality",
+          "zIndexPosition": "back",
+          "title": "Mean Annual Rate of TBI-related Mortality by County",
+          "yearKey": "Period",
+          "subtitle": "Unadjusted rate per 100,000 population",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/TBI/MapServer/2"
+        }
+      ]
+    }
+  ]
+}
