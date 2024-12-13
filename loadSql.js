@@ -140,4 +140,23 @@ let params = urlParams.map(x => {
 
 const urlParamsCmd = `INSERT INTO epht.Config_Tab_UrlParam_Test VALUES  
                     ${params}`;
+
 console.log(urlParamsCmd)
+
+
+/***********************************************************************************************************************/
+// DefaultSetName
+/***********************************************************************************************************************/
+
+const defaultSetNames = tabData.defaultSetNames ?? null;
+
+let setNames = defaultSetNames.map(x => {
+    let setName = format(x ?? null);
+    return `(${tab_ID}, ${setName})`;
+});
+
+const defaultSetNamesCmd = `INSERT INTO epht.Config_Tab_DefaultSetName_Test VALUES
+                    ${setNames}`;
+
+console.log(defaultSetNamesCmd)
+
