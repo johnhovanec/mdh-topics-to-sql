@@ -1,0 +1,125 @@
+{
+    "tabTitle": "County Hosp. Trend",
+    "tabPath": "countyHospitalizationTrend",
+    "contentType": "chart",
+    "exportTitle": "Mean annual unadjusted Rate of TBI-related Hospitalizations",
+    "exportSubtitle": "Unadjusted rate per 100k population",
+    "chartType": "trendline",
+    "selectable": true,
+    "stratifiable": false,
+    "defaultSelection": "000",
+    "defaultSetNames": ["stateRate"],
+    "baseline": "000",
+    "info": {
+        "title": "Rate of TBI Hospitalizations",
+        "id": "chart-tbi-hospitalizations-trend",
+        "subtitle": "Age-adjusted rate per 10,000"
+    },
+    "chartTitle": [
+        "Mean Annual Unadjusted Rate of TBI-related Hospitalizations"
+    ],
+    "chartSubtitle": "",
+    "displayChartTitle": true,
+    "displayChartSubtitle": true,
+    "displayYAxisLabel": true,
+    "displayXAxisLabel": true,
+    "displayChartDiscontinuityGraphic": false,
+    "yAxisLabel": "Unadjusted rate per 100,000 population",
+    "xAxisLabel": "Period",
+    "chartXAxisField": "year",
+    "chartDataSets": ["rate", "stateRate"],
+    "url": "/TBI/GetThreeYearCrudeRateCI",
+    "urlParams": [
+        { "param": "jurisdiction", "valueKey": "code" },
+        {
+            "param": "type",
+            "value": "TBI_Hospitalizations_CrudeRate_3yr"
+        }
+    ],
+    "chartConfig": {
+        "mainDatasets": [
+            {
+                "label": "County",
+                "setName": "rate",
+                "fill": false,
+                "pointRadius": 3,
+                "pointBorderWidth": 3,
+                "pointHoverRadius": 8,
+                "lineTension": 0,
+                "order": 1,
+                "data": []
+            },
+            {
+                "baseline": true,
+                "label": "Statewide",
+                "setName": "stateRate",
+                "fill": false,
+                "pointRadius": 3,
+                "pointBorderWidth": 3,
+                "pointHoverRadius": 8,
+                "lineTension": 0,
+                "order": 2,
+                "data": []
+            }
+        ],
+        "stratificationDatasets": []
+    },
+    "columnHeaders": [
+        {
+            "field": "year",
+            "headerName": "Period",
+            "width": 85,
+            "align": "left",
+            "headerAlign": "left"
+        },
+        {
+            "field": "rate",
+            "headerName": "County Rate",
+            "width": 134,
+            "customFormat": 2,
+            "align": "left",
+            "headerAlign": "left"
+        },
+        {
+            "field": "rateCILower",
+            "headerName": "Lower 95% Confidence Limit",
+            "width": 200,
+            "customFormat": 2,
+            "align": "left",
+            "headerAlign": "left"
+        },
+        {
+            "field": "rateCIUpper",
+            "headerName": "Upper 95% Confidence Limit",
+            "width": 200,
+            "customFormat": 2,
+            "align": "left",
+            "headerAlign": "left"
+        },
+        {
+            "field": "stateRate",
+            "headerName": "Statewide Rate",
+            "width": 160,
+            "customFormat": 2,
+            "align": "left",
+            "headerAlign": "left"
+        },
+        {
+            "field": "stateCILower",
+            "headerName": "State Lower 95% Confidence Limit",
+            "width": 225,
+            "customFormat": 2,
+            "align": "left",
+            "headerAlign": "left"
+        },
+        {
+            "field": "stateCIUpper",
+            "headerName": "State Upper 95% Confidence Limit",
+            "width": 225,
+            "customFormat": 2,
+            "align": "left",
+            "headerAlign": "left"
+        }
+    ],
+    "tableTitle": "Mean Annual Unadjusted Rate of TBI-related Hospitalizations"
+}
