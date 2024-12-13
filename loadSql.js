@@ -88,17 +88,17 @@ if (!tabPath) {
 }
 
 const tabCmd = `INSERT INTO epht.Config_Tab_Test VALUES
-                (
-                    ${theme_ID}, ${tabTitle}, ${tabPath}, ${contentType},
-                    ${exportTitle}, ${chartType}, ${selectable}, ${baseline},
-                    ${defaultSelection}, ${infoTitle}, ${infoID}, ${infoSubtitle},
-                    ${chartTitle}, ${displayChartTitle}, ${chartYAxisField}, ${displayChartDiscontinuityGraphic},
-                    ${displayXAxisLabel}, ${xAxisLabel}, ${url}, ${tableTitle},
-                    ${stratifiable}, ${chartSubtitle}, ${tableSubtitle}, ${defaultTab},
-                    ${textHeader}, ${textSubheading}, ${textBody}, ${exportSubtitle},
-                    ${contentTitle}, ${displayChartSubtitle}, ${displayYAxisLabel}, ${yAxisLabel},
-                    ${chartXAxisField}, ${defaultStratification}
-                )`;
+(
+    ${theme_ID}, ${tabTitle}, ${tabPath}, ${contentType},
+    ${exportTitle}, ${chartType}, ${selectable}, ${baseline},
+    ${defaultSelection}, ${infoTitle}, ${infoID}, ${infoSubtitle},
+    ${chartTitle}, ${displayChartTitle}, ${chartYAxisField}, ${displayChartDiscontinuityGraphic},
+    ${displayXAxisLabel}, ${xAxisLabel}, ${url}, ${tableTitle},
+    ${stratifiable}, ${chartSubtitle}, ${tableSubtitle}, ${defaultTab},
+    ${textHeader}, ${textSubheading}, ${textBody}, ${exportSubtitle},
+    ${contentTitle}, ${displayChartSubtitle}, ${displayYAxisLabel}, ${yAxisLabel},
+    ${chartXAxisField}, ${defaultStratification}
+)\n`;
 
 console.log(tabCmd);
 
@@ -112,14 +112,14 @@ const tab_ID = 21;
 // ChartDataSets
 /***********************************************************************************************************************/
 
-const dataSets = tabData.chartDataSets ?? null;
+const dataSets = tabData?.chartDataSets;
 
 let values = dataSets.map((set) => {
-  return `(${tab_ID}, '${set}')`;
+  return `(${tab_ID}, '${set}')\n`;
 });
 
 const dataSetCmd = `INSERT INTO epht.Config_Tab_ChartDataSet_Test VALUES 
-                    ${values}`;
+${values}`;
 
 console.log(dataSetCmd);
 
@@ -127,17 +127,17 @@ console.log(dataSetCmd);
 // UrlParams
 /***********************************************************************************************************************/
 
-const urlParams = tabData.urlParams ?? null;
+const urlParams = tabData?.urlParams;
 
 let params = urlParams.map((x) => {
   let value = format(x.value ?? null);
   let valueKey = format(x.valueKey ?? null);
 
-  return `(${tab_ID}, '${x.param}', ${value}, ${valueKey})`;
+  return `(${tab_ID}, '${x.param}', ${value}, ${valueKey})\n`;
 });
 
 const urlParamsCmd = `INSERT INTO epht.Config_Tab_UrlParam_Test VALUES  
-                    ${params}`;
+${params}`;
 
 console.log(urlParamsCmd);
 
@@ -145,15 +145,15 @@ console.log(urlParamsCmd);
 // DefaultSetName
 /***********************************************************************************************************************/
 
-const defaultSetNames = tabData.defaultSetNames ?? null;
+const defaultSetNames = tabData?.defaultSetNames;
 
 let setNames = defaultSetNames.map((x) => {
   let setName = format(x ?? null);
-  return `(${tab_ID}, ${setName})`;
+  return `(${tab_ID}, ${setName})\n`;
 });
 
 const defaultSetNamesCmd = `INSERT INTO epht.Config_Tab_DefaultSetName_Test VALUES
-                    ${setNames}`;
+${setNames}`;
 
 console.log(defaultSetNamesCmd);
 
@@ -165,7 +165,7 @@ console.log(defaultSetNamesCmd);
 // ChartConfig
 /***********************************************************************************************************************/
 
-const chartConfig = tabData.chartConfig ?? null;
+const chartConfig = tabData?.chartConfig;
 
 let keys = Object.keys(chartConfig);
 let config;
@@ -211,11 +211,34 @@ keys.forEach((key) => {
       return `(${tab_ID}, ${label}, ${setName}, ${fill}, ${order}, 
             ${yAxisID}, ${type}, ${pointRadius}, ${pointBorderWidth}, ${pointHoverRadius},
             ${pointHoverBorderWidth}, ${lineTension}, ${borderWidth}, ${stratification},
-            ${title}, ${baseline}, ${datasetType}, ${data})`;
+            ${title}, ${baseline}, ${datasetType}, ${data})\n`;
     });
   }
-  const chartConfigCmd = `INSERT INTO epht.Config_Tab_ChartConfig_Test VALUES  
-                    ${config}`;
+  const chartConfigCmd = `INSERT INTO epht.Config_Tab_ChartConfig_Test VALUES 
+  ${config}`;
 
   config.length ? console.log(chartConfigCmd) : null;
 });
+
+/***********************************************************************************************************************/
+// ColumnHeaders
+/***********************************************************************************************************************/
+
+const columnHeaders = tabData?.columnHeaders;
+
+let headers = columnHeaders.map((header) => {
+  let field = format(header.field ?? null);
+  let headerName = format(header.headerName ?? null);
+  let exportHeaderName = format(header.exportHeaderName ?? null);
+  let width = header.width ?? 0;
+  let align = format(header.align ?? null);
+  let headerAlign = format(header.headerAlign ?? null);
+  let customFormat = header.customFormat ?? 0;
+  let stratification = format(header.stratification ?? null);
+
+  return `(${tab_ID}, ${field}, ${headerName}, ${exportHeaderName}, ${width}, ${align}, ${headerAlign}, ${customFormat}, ${stratification})\n`;
+});
+
+const columnHeadersCmd = `INSERT INTO epht.Config_Tab_ColumnHeader_Test VALUES ${headers}`;
+
+console.log(columnHeadersCmd);
