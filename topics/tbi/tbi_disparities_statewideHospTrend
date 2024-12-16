@@ -1,0 +1,647 @@
+{
+  "tabTitle": "State Hosp. Trend",
+  "tabPath": "statewideHospTrend",
+  "contentType": "chart",
+  "exportTitle": "Annual Age-adjusted Rate of TBI-related Hospitalizations",
+  "exportSubtitle": "Age-adjusted rate per 100k population",
+  "chartType": "trendline",
+  "selectable": false,
+  "stratifiable": true,
+  "stratifications": [
+    {
+      "title": "Age",
+      "field": "age"
+    },
+    {
+      "title": "Cause",
+      "field": "cause"
+    },
+    {
+      "title": "Ethnicity",
+      "field": "TbiEthnicity"
+    },
+    {
+      "title": "Race",
+      "field": "TbiRace"
+    },
+    {
+      "title": "Sex",
+      "field": "sex"
+    }
+  ],
+  "defaultSelection": "000",
+  "defaultSetNames": [
+    "stateRate"
+  ],
+  "baseline": "000",
+  "info": {
+    "title": "Annual Age-adjusted Rate of TBI-related Hospitalizations",
+    "id": "chart-statewide-tbi-hospitalizations-trend",
+    "subtitle": "Age-adjusted rate per 100k population "
+  },
+  "chartTitle": [
+    "Annual Age-adjusted Rate of TBI-related Hospitalizations"
+  ],
+  "chartSubtitle": "",
+  "displayChartTitle": true,
+  "displayChartSubtitle": true,
+  "displayYAxisLabel": true,
+  "displayXAxisLabel": true,
+  "displayChartDiscontinuityGraphic": false,
+  "yAxisLabel": "Age-adjusted rate per 100,000 population",
+  "xAxisLabel": "Year",
+  "chartXAxisField": "year",
+  "chartDataSets": [
+    "rate",
+    "stateRate"
+  ],
+  "url": "/TBI/GetOneYearAgeAdjRate",
+  "urlParams": [
+    {
+      "param": "type",
+      "value": "TBI_Hospitalizations_AgeAdjRate_Annual"
+    }
+  ],
+  "chartConfig": {
+    "mainDatasets": [
+      {
+        "label": "County",
+        "setName": "rate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "baseline": true,
+        "label": "Statewide",
+        "setName": "stateRate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      }
+    ],
+    "stratificationDatasets": [
+      {
+        "label": "All",
+        "setName": "rateTotal",
+        "stratification": "cause",
+        "title": "Cause",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 4,
+        "data": []
+      },
+      {
+        "label": "Falls",
+        "setName": "rateFalls",
+        "stratification": "cause",
+        "title": "Cause",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "Firearm",
+        "setName": "rateFirearm",
+        "stratification": "cause",
+        "title": "Cause",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "Vehicle",
+        "setName": "rateMotorVehicle",
+        "stratification": "cause",
+        "title": "Cause",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      },
+      {
+        "label": "All",
+        "setName": "rateTotal",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 12,
+        "data": []
+      },
+      {
+        "label": "< 1",
+        "setName": "rateUnder1",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "1-4",
+        "setName": "rate1to4",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "5-14",
+        "setName": "rate5to14",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      },
+      {
+        "label": "15-24",
+        "setName": "rate15to24",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 4,
+        "data": []
+      },
+      {
+        "label": "25-34",
+        "setName": "rate25to34",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 5,
+        "data": []
+      },
+      {
+        "label": "35-44",
+        "setName": "rate35to44",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 6,
+        "data": []
+      },
+      {
+        "label": "45-54",
+        "setName": "rate45to54",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 7,
+        "data": []
+      },
+      {
+        "label": "55-64",
+        "setName": "rate55to64",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 8,
+        "data": []
+      },
+      {
+        "label": "65-74",
+        "setName": "rate65to74",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 9,
+        "data": []
+      },
+      {
+        "label": "75-84",
+        "setName": "rate75to84",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 10,
+        "data": []
+      },
+      {
+        "label": "85+",
+        "setName": "rateover85",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 11,
+        "data": []
+      },
+      {
+        "label": "All",
+        "setName": "rateTotal",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      },
+      {
+        "label": "Female",
+        "setName": "rateFemale",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "Male",
+        "setName": "rateMale",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "All",
+        "setName": "rateTotal",
+        "stratification": "TbiRace",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 4,
+        "data": []
+      },
+      {
+        "label": "Black",
+        "setName": "rateBlack",
+        "stratification": "TbiRace",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "White",
+        "setName": "rateWhite",
+        "stratification": "TbiRace",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "Other",
+        "setName": "rateOther",
+        "stratification": "TbiRace",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      },
+      {
+        "label": "All",
+        "setName": "rateTotal",
+        "stratification": "TbiEthnicity",
+        "title": "Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      },
+      {
+        "label": "Hispanic",
+        "setName": "rateHispanic",
+        "stratification": "TbiEthnicity",
+        "title": "Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "Non-Hispanic",
+        "setName": "rateNonHispanic",
+        "stratification": "TbiEthnicity",
+        "title": "Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      }
+    ]
+  },
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Year",
+      "width": 85,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate",
+      "headerName": "County Rate",
+      "width": 134,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "stateRate",
+      "headerName": "Statewide Rate",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFalls",
+      "headerName": "Falls",
+      "stratification": "cause",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearm",
+      "headerName": "Firearm",
+      "stratification": "cause",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicle",
+      "headerName": "Vehicle",
+      "stratification": "cause",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateUnder1",
+      "headerName": "Ages < 1",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate1to4",
+      "headerName": "Ages 1-4",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate5to14",
+      "headerName": "Ages 5-14",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate15to24",
+      "headerName": "Ages 15-24",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate25to34",
+      "headerName": "Ages 25-34",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate35to44",
+      "headerName": "Ages 35-44",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate45to54",
+      "headerName": "Ages 45-54",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate55to64",
+      "headerName": "Ages 55-64",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate65to74",
+      "headerName": "Ages 65-74",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate75to84",
+      "headerName": "Ages 75-84",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateover85",
+      "headerName": "Ages 85+",
+      "stratification": "age",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFemale",
+      "headerName": "Female",
+      "stratification": "sex",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMale",
+      "headerName": "Male",
+      "stratification": "sex",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateBlack",
+      "headerName": "Black",
+      "stratification": "TbiRace",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateWhite",
+      "headerName": "White",
+      "stratification": "TbiRace",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateOther",
+      "headerName": "Other",
+      "stratification": "TbiRace",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateHispanic",
+      "headerName": "Hispanic",
+      "stratification": "TbiEthnicity",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateNonHispanic",
+      "headerName": "Non-Hispanic",
+      "stratification": "TbiEthnicity",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ],
+  "tableTitle": "Annual Age-adjusted Rate of TBI-related Hospitalizations"
+}

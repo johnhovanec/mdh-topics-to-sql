@@ -40,48 +40,47 @@ function format(word) {
   }
 }
 
-const tabData = readAndParseJSFile(filePath);
+const data = readAndParseJSFile(filePath);
 
 /***********************************************************************************************************************/
 // Tabs
 /***********************************************************************************************************************/
-//theme = 11
 
-const theme_ID = 11;
-const tabTitle = format(tabData.tabTitle ?? null);
-const tabPath = format(tabData.tabPath ?? null);
-const contentType = format(tabData.contentType ?? null);
-const exportTitle = format(tabData.exportTitle ?? null);
-const chartType = format(tabData.chartType ?? null);
-const selectable = tabData.selectable === true ? 1 : 0;
-const baseline = format(tabData.baseline ?? null);
-const defaultSelection = format(tabData.defaultSelection ?? null);
-const infoTitle = format(tabData?.info?.title ?? null);
-const infoID = format(tabData?.info?.id ?? null);
-const infoSubtitle = format(tabData?.info?.subtitle ?? null);
-const chartTitle = format(tabData.chartTitle ?? null);
-const displayChartTitle = tabData.displayChartTitle === true ? 1 : 0;
-const chartYAxisField = format(tabData.chartYAxisField ?? null);
+const theme_ID = 12;
+const tabTitle = format(data.tabTitle ?? null);
+const tabPath = format(data.tabPath ?? null);
+const contentType = format(data.contentType ?? null);
+const exportTitle = format(data.exportTitle ?? null);
+const chartType = format(data.chartType ?? null);
+const selectable = data.selectable === true ? 1 : 0;
+const baseline = format(data.baseline ?? null);
+const defaultSelection = format(data.defaultSelection ?? null);
+const infoTitle = format(data?.info?.title ?? null);
+const infoID = format(data?.info?.id ?? null);
+const infoSubtitle = format(data?.info?.subtitle ?? null);
+const chartTitle = format(data.chartTitle ?? null);
+const displayChartTitle = data.displayChartTitle === true ? 1 : 0;
+const chartYAxisField = format(data.chartYAxisField ?? null);
 const displayChartDiscontinuityGraphic =
-  tabData.displayChartDiscontinuityGraphic === true ? 1 : 0;
-const displayXAxisLabel = tabData.displayXAxisLabel === true ? 1 : 0;
-const xAxisLabel = format(tabData.xAxisLabel ?? null);
-const url = format(tabData.url ?? null);
-const tableTitle = format(tabData.tableTitle ?? null);
-const stratifiable = tabData.stratifiable === true ? 1 : 0;
-const chartSubtitle = format(tabData.chartSubtitle ?? null);
-const tableSubtitle = format(tabData.tableSubtitle ?? null);
-const defaultTab = tabData.defaultTab === true ? 1 : 0;
-const textHeader = format(tabData.textHeader ?? null);
-const textSubheading = format(tabData.textSubheading ?? null);
-const textBody = format(tabData.textBody ?? null);
-const exportSubtitle = format(tabData.exportSubtitle ?? null);
-const contentTitle = format(tabData.contentTitle ?? null);
-const displayChartSubtitle = tabData.displayChartSubtitle === true ? 1 : 0;
-const displayYAxisLabel = tabData.displayYAxisLabel === true ? 1 : 0;
-const yAxisLabel = format(tabData.yAxisLabel ?? null);
-const chartXAxisField = format(tabData.chartXAxisField ?? null);
-const defaultStratification = format(tabData.defaultStratification ?? null);
+  data.displayChartDiscontinuityGraphic === true ? 1 : 0;
+const displayXAxisLabel = data.displayXAxisLabel === true ? 1 : 0;
+const xAxisLabel = format(data.xAxisLabel ?? null);
+const url = format(data.url ?? null);
+const tableTitle = format(data.tableTitle ?? null);
+const stratifiable = data.stratifiable === true ? 1 : 0;
+const chartSubtitle = format(data.chartSubtitle ?? null);
+const tableSubtitle = format(data.tableSubtitle ?? null);
+const defaultTab = data.defaultTab === true ? 1 : 0;
+const textHeader = format(data.textHeader ?? null);
+const textSubheading = format(data.textSubheading ?? null);
+const textBody = format(data.textBody ?? null);
+const exportSubtitle = format(data.exportSubtitle ?? null);
+const contentTitle = format(data.contentTitle ?? null);
+const displayChartSubtitle = data.displayChartSubtitle === true ? 1 : 0;
+const displayYAxisLabel = data.displayYAxisLabel === true ? 1 : 0;
+const yAxisLabel = format(data.yAxisLabel ?? null);
+const chartXAxisField = format(data.chartXAxisField ?? null);
+const defaultStratification = format(data.defaultStratification ?? null);
 
 if (!tabPath) {
   throw Error("tabPath must be defined");
@@ -105,7 +104,7 @@ console.log(tabCmd);
 /***********************************************************************************************************************/
 // Once the tab is created all chart configs will use the same Tab_Id
 // tab = 21
-const tab_ID = 23;
+const tab_ID = 28;
 /***********************************************************************************************************************/
 
 /***********************************************************************************************************************/
@@ -116,7 +115,7 @@ const tab_ID = 23;
 const mapSet_ID = 10;
 /***********************************************************************************************************************/
 
-const mapSets = tabData?.mapSets;
+const mapSets = data?.mapSets;
 
 if (mapSets != null) {
   let values = mapSets.map((mapSet) => {
@@ -262,7 +261,7 @@ ${values}`;
 // Charts: ChartDataSets
 /***********************************************************************************************************************/
 
-const dataSets = tabData?.chartDataSets;
+const dataSets = data?.chartDataSets;
 
 if (dataSets != null) {
   let values = dataSets.map((set) => {
@@ -279,7 +278,7 @@ ${values}`;
 // Charts: UrlParams
 /***********************************************************************************************************************/
 
-const urlParams = tabData?.urlParams;
+const urlParams = data?.urlParams;
 
 if (urlParams != null) {
   let params = urlParams.map((x) => {
@@ -299,7 +298,7 @@ ${params}`;
 // Charts: DefaultSetName
 /***********************************************************************************************************************/
 
-const defaultSetNames = tabData?.defaultSetNames;
+const defaultSetNames = data?.defaultSetNames;
 
 if (defaultSetNames != null) {
   let setNames = defaultSetNames.map((x) => {
@@ -317,11 +316,26 @@ ${setNames}`;
 // Charts: Stratifications
 /***********************************************************************************************************************/
 
+const stratifications = data?.stratifications;
+
+if (stratifications != null) {
+  let setNames = stratifications.map((x) => {
+    let title = format(x.title ?? null);
+    let field = format(x.field ?? null);
+    return `(${tab_ID}, ${title}, ${field})\n`;
+  });
+
+  const stratificationsCmd = `INSERT INTO epht.Config_Tab_Stratification_Test VALUES
+${setNames}`;
+
+  console.log(stratificationsCmd);
+}
+
 /***********************************************************************************************************************/
 // Charts: ChartConfig
 /***********************************************************************************************************************/
 
-const chartConfig = tabData?.chartConfig;
+const chartConfig = data?.chartConfig;
 
 if (chartConfig != null) {
   let keys = Object.keys(chartConfig);
@@ -382,7 +396,7 @@ if (chartConfig != null) {
 // Charts: ColumnHeaders
 /***********************************************************************************************************************/
 
-const columnHeaders = tabData?.columnHeaders;
+const columnHeaders = data?.columnHeaders;
 
 if (chartConfig != null) {
   let headers = columnHeaders.map((header) => {
@@ -401,4 +415,29 @@ if (chartConfig != null) {
   const columnHeadersCmd = `INSERT INTO epht.Config_Tab_ColumnHeader_Test VALUES ${headers}`;
 
   console.log(columnHeadersCmd);
+}
+
+/***********************************************************************************************************************/
+// Tables
+/***********************************************************************************************************************/
+const tableColumnHeaders = data?.columnHeaders;
+
+if (tableColumnHeaders != null) {
+  let headers = tableColumnHeaders.map((header) => {
+    let field = format(header.field ?? null);
+    let headerName = format(header.headerName ?? null);
+    let exportHeaderName = format(header.exportHeaderName ?? null);
+    let width = header.width ?? 0;
+    let align = format(header.align ?? null);
+    let headerAlign = format(header.headerAlign ?? null);
+    let customFormat = header.customFormat ?? 0;
+    let stratification = format(header.stratification ?? null);
+
+    return `(${tab_ID}, ${field}, ${headerName}, ${exportHeaderName}, ${width}, ${align}, ${headerAlign}, ${customFormat}, ${stratification})\n`;
+  });
+
+  const tableColumnHeadersCmd = `INSERT INTO epht.Config_Tab_ColumnHeader_Test VALUES
+${headers}`;
+
+  console.log(tableColumnHeadersCmd);
 }

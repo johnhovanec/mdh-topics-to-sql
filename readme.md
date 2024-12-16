@@ -8,6 +8,10 @@ into the MDH database.
 The current topics.js file is not valid JSON so this script expects each Tab of a topic to converted to valid JSON **before**
 running this script.
 
-ChatGPT does a good job of taking a pasted topic from topics.js and converting it to valid JSON. Note that if it can't  
-figure out a field it will replace it with an all-caps placeholder value. For example, for a `url` property it can't  
-decode it will provide a value of `URL_PLACEHOLDER`.
+Note that when running topics.js contents through conversion, the url environment process and all comments must be removed  
+in order to convert it to valid JSON.
+
+## Output
+
+The scripts currently log to the console the sql commands. From there the sql commands can be reviewed or copied into  
+SSMS to be run.
