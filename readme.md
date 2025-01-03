@@ -9,7 +9,14 @@ The current topics.js file is not valid JSON so this script expects each Tab of 
 running this script.
 
 Note that when running topics.js contents through conversion, the url environment process and all comments must be removed  
-in order to convert it to valid JSON.
+in order to convert it to valid JSON. Each JSON file corresponding to a Tab has been saved within the `topics` directory  
+of this project.
+
+### topicsForSql.json
+
+This file is used as a convenience to copy each Tab's JSON content in order to not have to modify `loadSql.js` to point  
+to a new file. The contents of a given Tab's JSON output was copied into this file, and then loadSql.js was run to parse  
+that into T-Sql scripts.
 
 ## Output
 
