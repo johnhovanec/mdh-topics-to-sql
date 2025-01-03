@@ -1,0 +1,94 @@
+{
+  "tabTitle": "PM 2.5 Annual",
+  "tabPath": "pm25Annual",
+  "contentType": "map",
+  "timeSlider": true,
+  "contentTitle": "Fine Particulate Matter (PM2.5) Annual Design Values 2000 - 2020 ",
+  "exportTitle": "Fine Particulate Matter (PM2.5) Annual Design Values 2000 - 2020 ",
+  "exportSubtitle": "",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Rate of Emergency Department (ED) Visits for Carbon Monoxide (CO) Poisoning",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "additional": {
+          "name": "You cannot zoom into this map. Please see \"About\" for more information."
+        }
+      },
+      "setLayers": [
+        {
+          "id": "PM25-Annual-2000",
+          "zIndexPosition": "back",
+          "title": "Annual PM2.5 Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 12 micrograms per cubic meter (μg/m3) and below meet the 2012 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityPM25Annual/MapServer/2000"
+        },
+        {
+          "id": "PM25-Annual-2005",
+          "zIndexPosition": "back",
+          "title": "Annual PM2.5 Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 12 micrograms per cubic meter (μg/m3) and below meet the 2012 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityPM25Annual/MapServer/2005"
+        },
+        {
+          "id": "PM25-Annual-2010",
+          "zIndexPosition": "back",
+          "title": "Annual PM2.5 Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 12 micrograms per cubic meter (μg/m3) and below meet the 2012 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityPM25Annual/MapServer/2010"
+        },
+        {
+          "id": "PM25-Annual-2015",
+          "zIndexPosition": "back",
+          "title": "Annual PM2.5 Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 12 micrograms per cubic meter (μg/m3) and below meet the 2012 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityPM25Annual/MapServer/2015"
+        },
+        {
+          "id": "PM25-Annual-2020",
+          "zIndexPosition": "back",
+          "title": "Annual PM2.5 Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 12 micrograms per cubic meter (μg/m3) and below meet the 2012 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityPM25Annual/MapServer/2020"
+        }
+      ]
+    }
+  ]
+}

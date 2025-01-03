@@ -1,0 +1,55 @@
+{
+  "tabTitle": "Age-Adj. ED Rate",
+  "tabPath": "ageAdjustedRate",
+  "contentType": "map",
+  "contentTitle": "Age-Adjusted Rate of Emergency Department (ED) Visits for Asthma",
+  "exportTitle": "Age-Adjusted Rate of Emergency Department (ED) Visits for Asthma",
+  "exportSubtitle": "Age-adjusted rate per 10k population",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Rate of Emergency Department (ED) Visits for Asthma",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "Emergency Department (ED) Visits for Asthma per 10,000 population",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-asthma-age-adjusted-rate",
+          "zIndexPosition": "front",
+          "title": "Emergency Department (ED) Visits for Asthma",
+          "subtitle": "Age-adjusted rate per 10,000 population",
+          "yearKey": "Year",
+          "sourceLayer": true,
+          "defaultVisible": true,
+          "url": "/AsthmaCounty/MapServer/0"
+        }
+      ]
+    }
+  ]
+}

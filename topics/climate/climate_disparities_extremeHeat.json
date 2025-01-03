@@ -1,0 +1,116 @@
+{
+  "tabTitle": "Extreme Heat",
+  "tabPath": "extremeHeat",
+  "contentType": "chart",
+  "exportTitle": "Days Over Heat Index Threshold and Heat Stress",
+  "exportSubtitle": "Age-adjusted rate per 100k population",
+  "chartType": "mixed",
+  "highContrastPalette": true,
+  "selectable": true,
+  "defaultSelection": "001",
+  "defaultSetNames": [
+    "hospitalizationRate",
+    "edVisitRate",
+    "daysOverHeatIndex"
+  ],
+  "info": {
+    "title": "Heat Index and Heat Stress ",
+    "id": "chart-climate-extreme-heat",
+    "subtitle": "Age-adjusted rate per 100k population"
+  },
+  "chartTitle": "Heat Index and Heat Stress",
+  "chartSubtitle": "Data changed in late 2015. See 'About' for details.",
+  "displayChartTitle": true,
+  "displayChartSubtitle": true,
+  "chartXAxisField": "year",
+  "displayYAxisLabel": true,
+  "displayXAxisLabel": true,
+  "displayChartDiscontinuityGraphic": true,
+  "xAxisLabel": "Year",
+  "yAxisLabelLeft": "Age-adjusted rate per 100,000 population",
+  "yAxisLabelRight": "Days over heat index threshold",
+  "yAxisIdLeft": "rates",
+  "yAxisIdRight": "days",
+  "chartDataSets": ["hospitalizationRate", "edVisitRate", "daysOverHeatIndex"],
+  "url": "/Climate/GetNumberDaysOverHeatIndexThreshold",
+  "urlParams": [
+    {
+      "param": "jurisdiction"
+    }
+  ],
+  "chartConfig": [
+    {
+      "setName": "hospitalizationRate",
+      "label": "Hospitalization Rate",
+      "yAxisID": "rates",
+      "type": "line",
+      "fill": true,
+      "pointRadius": 4,
+      "pointBorderWidth": 3,
+      "pointHoverRadius": 8,
+      "pointHoverBorderWidth": 3,
+      "lineTension": 0,
+      "borderWidth": 3,
+      "data": []
+    },
+    {
+      "setName": "edVisitRate",
+      "label": "ED Visit Rate",
+      "yAxisID": "rates",
+      "type": "line",
+      "fill": true,
+      "pointRadius": 4,
+      "pointBorderWidth": 3,
+      "pointHoverRadius": 8,
+      "pointHoverBorderWidth": 3,
+      "lineTension": 0,
+      "borderWidth": 3,
+      "data": []
+    },
+    {
+      "setName": "daysOverHeatIndex",
+      "label": "Days Over Threshold",
+      "yAxisID": "days",
+      "type": "bar",
+      "fill": false,
+      "data": []
+    }
+  ],
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Year",
+      "width": 90,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "edVisitRate",
+      "headerName": "ED Visit Rate",
+      "exportHeaderName": "ED Visit Rate",
+      "width": 140,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "hospitalizationRate",
+      "headerName": "Hospitalization Rate",
+      "exportHeaderName": "Hospitalization Rate",
+      "width": 188,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "daysOverHeatIndex",
+      "headerName": "Days Over Threshold",
+      "exportHeaderName": "Days Over Threshold ",
+      "width": 190,
+      "customFormat": 1,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ],
+  "tableTitle": "Days Over Heat Index Threshold and Heat Stress"
+}

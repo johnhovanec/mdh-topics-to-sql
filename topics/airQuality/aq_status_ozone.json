@@ -1,0 +1,93 @@
+{
+  "tabTitle": "Ozone",
+  "tabPath": "ozone",
+  "contentType": "map",
+  "timeSlider": true,
+  "contentTitle": "Ozone Design Values 2000-2020",
+  "exportTitle": "Ozone Design Values 2000-2020",
+  "exportSubtitle": "",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "additional": {
+          "name": "You cannot zoom into this map. Please see \"About\" for more information."
+        }
+      },
+      "setLayers": [
+        {
+          "id": "ozone-2000",
+          "zIndexPosition": "front",
+          "title": "8-Hour Ozone Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 70 parts per billion (ppb) and below meet the 2015 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityOzone/MapServer/2000"
+        },
+        {
+          "id": "ozone-2005",
+          "zIndexPosition": "back",
+          "title": "Ozone Data 2000-2020",
+          "yearKey": "Year",
+          "subtitle": "Values of 70 parts per billion (ppb) and below meet the 2015 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityOzone/MapServer/2005"
+        },
+        {
+          "id": "ozone-2010",
+          "zIndexPosition": "back",
+          "title": "Ozone Data 2000-2020",
+          "yearKey": "Year",
+          "subtitle": "Values of 70 parts per billion (ppb) and below meet the 2015 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityOzone/MapServer/2010"
+        },
+        {
+          "id": "ozone-2015",
+          "zIndexPosition": "back",
+          "title": "Ozone Data 2000-2020",
+          "yearKey": "Year",
+          "subtitle": "Values of 70 parts per billion (ppb) and below meet the 2015 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityOzone/MapServer/2015"
+        },
+        {
+          "id": "ozone-2020",
+          "zIndexPosition": "back",
+          "title": "Ozone Data 2000-2020",
+          "yearKey": "Year",
+          "subtitle": "Values of 70 parts per billion (ppb) and below meet the 2015 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityOzone/MapServer/2020"
+        }
+      ]
+    }
+  ]
+}

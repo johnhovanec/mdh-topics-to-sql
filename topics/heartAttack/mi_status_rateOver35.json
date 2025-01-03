@@ -1,0 +1,55 @@
+{
+  "tabTitle": "Age 35+",
+  "tabPath": "rateOver35",
+  "contentType": "map",
+  "contentTitle": "Unadjusted Rate of Hospitalizations for Heart Attack, Ages 35 and Older",
+  "exportTitle": "Unadjusted Rate of Hospitalizations for Heart Attack Ages 35 and Older",
+  "exportSubtitle": "Unadjusted rate per 10k population",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Unadjusted Rate of Hospitalizations for Heart Attack, Ages 35 and Older",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "Heart attack hospitalizations per 10,000 population age 35+",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-mi-rate-over-35",
+          "zIndexPosition": "front",
+          "title": "Rate of Hospitalizations for Heart Attack by County",
+          "subtitle": "Unadjusted rate per 10,000 population age 35 and older",
+          "yearKey": "Year",
+          "sourceLayer": true,
+          "defaultVisible": true,
+          "url": "/MI/MapServer/2"
+        }
+      ]
+    }
+  ]
+}

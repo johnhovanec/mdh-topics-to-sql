@@ -1,0 +1,238 @@
+{
+  "tabTitle": "Testing Trends",
+  "tabPath": "testingTrend",
+  "contentType": "chart",
+  "exportTitle": "Percent of Children Tested for Lead in Maryland",
+  "exportSubtitle": "*Effective October 1 2019 the legal definition of an​ elevated blood lead level in Maryland is the same as the clinical definition: 5 micrograms per deciliter (µg/dL). Children tested are aged 6 and younger.",
+  "chartType": "trendline",
+  "selectable": true,
+  "stratifiable": true,
+  "stratifications": [
+    {
+      "title": "Age",
+      "field": "age"
+    },
+    {
+      "title": "Sex",
+      "field": "sex"
+    }
+  ],
+  "defaultSelection": "000",
+  "defaultSelectionName": "Statewide",
+  "defaultSetNames": ["stateRate"],
+  "baseline": "000",
+  "info": {
+    "title": "Percent Children Tested",
+    "id": "chart-lead-percent-tested-trend",
+    "subtitle": "Age-adjusted rate per 10,000"
+  },
+  "chartTitle": "Percent of Children Under Age 6 Tested for Lead",
+  "displayChartTitle": true,
+  "displayXAxisLabel": true,
+  "xAxisLabel": "Year",
+  "displayYAxisLabel": true,
+  "displayChartDiscontinuityGraphic": false,
+  "yAxisLabel": "Percent of Children Tested",
+  "chartXAxisField": "year",
+  "chartDataSets": ["rate", "stateRate"],
+  "url": "/Lead/GetLeadPercentTested",
+  "urlParams": [
+    {
+      "param": "jurisdiction",
+      "valueKey": "code"
+    }
+  ],
+  "chartConfig": {
+    "mainDatasets": [
+      {
+        "label": "County",
+        "setName": "rate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "baseline": true,
+        "label": "Statewide",
+        "setName": "stateRate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      }
+    ],
+    "stratificationDatasets": [
+      {
+        "label": "Female",
+        "setName": "rateFemale",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "Male",
+        "setName": "rateMale",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "All",
+        "baseline": true,
+        "setName": "rateTotal",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 4,
+        "data": []
+      },
+      {
+        "label": "0 - <12 months",
+        "setName": "rate0to12",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "12 - <36 months",
+        "setName": "rate12to36",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "36 - <72 months",
+        "setName": "rate36to72",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      },
+      {
+        "label": "All Ages < 6 years",
+        "baseline": true,
+        "setName": "rateTotal",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 4,
+        "data": []
+      }
+    ]
+  },
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Year",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate",
+      "headerName": "County Mean",
+      "width": 140,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "stateRate",
+      "headerName": "Statewide Mean",
+      "width": 170,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMale",
+      "headerName": "Male",
+      "stratification": "sex",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFemale",
+      "headerName": "Female",
+      "stratification": "sex",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate0to12",
+      "headerName": "0 - <12 months",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate12to36",
+      "headerName": "12 - <36 months",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate36to72",
+      "headerName": "36 - <72 months",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ],
+  "tableTitle": "Percent Children Under Age 6 Tested for Lead"
+}

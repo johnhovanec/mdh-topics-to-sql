@@ -1,0 +1,73 @@
+{
+  "tabTitle": "Age-Adj. Rate and Particulate Matter",
+  "tabPath": "ageAdjRatePM25",
+  "contentType": "map",
+  "contentTitle": "Annual Concentration of Fine Particulate Matter (PM2.5) and Age-Adjusted Rate of Hospitalizations for Heart Attack, Age 35 and Older",
+  "exportTitle": "Age-Adjusted Rate of Hospitalizations for Heart Attack Age 35 and Older",
+  "exportSubtitle": "Age-adjusted rate per 10k population (2017)",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Rate of Hospitalizations for Heart Attack, Age 35 and Older",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "Heart attack hospitalizations, rate per 10,000 population",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-mi-rate-over-35-programs",
+          "zIndexPosition": "front",
+          "title": "Rate of Hospitalizations for Heart Attack by County",
+          "subtitle": "Age-adjusted rate per 10,000 population for ages 35 and older",
+          "yearKey": "Year",
+          "sourceLayer": true,
+          "defaultVisible": true,
+          "url": "/MI/MapServer/1"
+        },
+        {
+          "id": "county-mi-pm25",
+          "zIndexPosition": "front",
+          "title": "Fine Particulate Matter (PM2.5) Annual Design Value",
+          "subtitle": "Annual mean concentration, averaged over three consecutive years in micrograms per cubic meter (μg/m3). Values at or below 12.0 μg/m3 meet the national standard.",
+          "yearKey": "Year",
+          "sourceLayer": false,
+          "defaultVisible": true,
+          "referenceLayer": true,
+          "toggleable": true,
+          "content": {
+            "title": "Label",
+            "line1": "PM2.5 annual design value:",
+            "line2A": "ANNUAL_DESIGN_VALUE",
+            "line2B": " micrograms per cubic meter (μg/m3)"
+          },
+          "url": "/MI/MapServer/0"
+        }
+      ]
+    }
+  ]
+}

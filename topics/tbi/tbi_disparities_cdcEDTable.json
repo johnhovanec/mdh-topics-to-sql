@@ -1,0 +1,367 @@
+{
+  "tabTitle": "State ED Table",
+  "tabPath": "cdcEDTable",
+  "contentType": "table",
+  "url": "/TBI/GetCDCAgeAdjRate?type=TBI_CDC_EDVisits_AgeAdjRate_Annual",
+  "info": {
+    "title": "CDC ED Table",
+    "id": "table-CDC-ED",
+    "subtitle": "Age-adjusted rate per 100,000 population"
+  },
+  "tableTitle": "Annual Rate of TBI-related Emergency Department (ED) Visits",
+  "tableSubtitle": "Age-adjusted rate per 100,000 population",
+  "exportTitle": "Annual Rate of TBI-related Emergency Department (ED) Visits",
+  "exportSubtitle": "Age-adjusted rate per 100k population",
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Period",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "jurisdiction",
+      "headerName": "Jurisdiction",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateTotal",
+      "headerName": "Total",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateTotalFemale",
+      "headerName": "Female All Ages",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateTotalMale",
+      "headerName": "Male All Ages",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateUnder1",
+      "headerName": "Total < 1",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateUnder1Female",
+      "headerName": "Female < 1",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateUnder1Male",
+      "headerName": "Male < 1",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate1to4",
+      "headerName": "Total 1-4",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate1to4Female",
+      "headerName": "Female 1-4",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate1to4Male",
+      "headerName": "Male 1-4",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate5to9",
+      "headerName": "Total 5-9",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate5to9Female",
+      "headerName": "Female 5-9",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate5to9Male",
+      "headerName": "Male 5-9",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate10to14",
+      "headerName": "Total 10-14",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate10to14Female",
+      "headerName": "Female 10-14",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate10to14Male",
+      "headerName": "Male 10-14",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate15to19",
+      "headerName": "Total 15-19",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate15to19Female",
+      "headerName": "Female 15-19",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate15to19Male",
+      "headerName": "Male 15-19",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate20to24",
+      "headerName": "Total 20-24",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate20to24Female",
+      "headerName": "Female 20-24",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate20to24Male",
+      "headerName": "Male 20-24",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate25to34",
+      "headerName": "Total 25-34",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate25to34Female",
+      "headerName": "Female 25-34",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate25to34Male",
+      "headerName": "Male 25-34",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate35to44",
+      "headerName": "Total 35-44",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate35to44Female",
+      "headerName": "Female 35-44",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate35to44Male",
+      "headerName": "Male 35-44",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate45to54",
+      "headerName": "Total 45-54",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate45to54Female",
+      "headerName": "Female 45-54",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate45to54Male",
+      "headerName": "Male 45-54",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate55to64",
+      "headerName": "Total 55-64",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate55to64Female",
+      "headerName": "Female 55-64",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate55to64Male",
+      "headerName": "Male 55-64",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate65to74",
+      "headerName": "Total 65-74",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate65to74Female",
+      "headerName": "Female 65-74",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate65to74Male",
+      "headerName": "Male 65-74",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate75to84",
+      "headerName": "Total 75-84",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate75to84Female",
+      "headerName": "Female 75-84",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate75to84Male",
+      "headerName": "Male 75-84",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateover85",
+      "headerName": "Total 85+",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateover85Female",
+      "headerName": "Female 85+",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateover85Male",
+      "headerName": "Male 85+",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    }
+  ]
+}

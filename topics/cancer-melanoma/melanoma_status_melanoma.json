@@ -1,0 +1,56 @@
+{
+  "tabTitle": "Map",
+  "tabPath": "melanoma",
+  "contentType": "map",
+  "contentTitle": "Age-Adjusted Incidence Rate of Melanoma of the Skin",
+  "exportTitle": "Age-Adjusted Incidence Rate of Melanoma of the Skin",
+  "exportSubtitle": "Age-adjusted incidence rate per 100k population (2016-2020) ",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Incidence Rate of Melanoma of the Skin",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "Melanoma of the Skin rate per 100,000",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-melanoma-cancer",
+          "zIndexPosition": "back",
+          "title": "Incidence Rate of Melanoma of the Skin by County",
+          "yearKey": "Period",
+          "subtitle": "Age-adjusted rate per 100,000 population",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/CancerCounty/MapServer/15"
+        }
+      ]
+    }
+  ]
+}

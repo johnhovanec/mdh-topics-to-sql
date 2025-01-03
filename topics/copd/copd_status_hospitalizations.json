@@ -1,0 +1,56 @@
+{
+  "tabTitle": "Hospitalizations",
+  "tabPath": "hospitalizations",
+  "contentType": "map",
+  "contentTitle": "Age-Adjusted Rate of Hospitalizations for COPD, Age 25 and Older",
+  "exportTitle": "Age-Adjusted Rate of Hospitalizations for COPD Age 25 and Older",
+  "exportSubtitle": "Age-adjusted rate per 10k population",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Rate of Hospitalizations for COPD, Age 25 and Older",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "COPD hospitalizations per 10,000 population age 25+",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-copd-age-adjusted-rate",
+          "zIndexPosition": "front",
+          "title": "Rate of Hospitalizations for COPD by County",
+          "subtitle": "Age-adjusted rate per 10,000 population age 25 and older",
+          "yearKey": "Year",
+          "sourceLayer": true,
+          "defaultVisible": true,
+          "url": "/COPD/MapServer/0"
+        }
+      ]
+    }
+  ],
+  "tableTitle": "Rate of Hospitalizations for Heat Stress"
+}

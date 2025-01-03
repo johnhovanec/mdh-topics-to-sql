@@ -1,0 +1,56 @@
+{
+  "tabTitle": "Map",
+  "tabPath": "liver",
+  "contentType": "map",
+  "contentTitle": "Age-Adjusted Incidence Rate of Liver and Intraheptic Bile Duct Cancer",
+  "exportTitle": "Age-Adjusted Incidence Rate of Liver and Intraheptic Bile Duct Cancer",
+  "exportSubtitle": "Age-adjusted incidence rate per 100k population (2016-2020) ",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Incidence Rate of Liver and Intraheptic Bile Duct Cancer",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "Liver and Intraheptic Bile Duct Cancer rate per 100,000",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-liver-cancer",
+          "zIndexPosition": "back",
+          "title": "Incidence Rate of Liver and Intraheptic Bile Duct Cancer by County",
+          "yearKey": "Period",
+          "subtitle": "Age-adjusted rate per 100,000 population",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/CancerCounty/MapServer/12"
+        }
+      ]
+    }
+  ]
+}

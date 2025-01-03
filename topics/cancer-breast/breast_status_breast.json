@@ -1,0 +1,119 @@
+{
+  "tabTitle": "Map",
+  "tabPath": "breast",
+  "contentType": "map",
+  "contentTitle": "Age-Adjusted Incidence Rate of Breast Cancer in Females",
+  "exportTitle": "Age-Adjusted Incidence Rate of Breast Cancer in Females",
+  "exportSubtitle": "Age-adjusted incidence rate per 100k population (County: 2016-2020, Tract: 2015-2019)",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Incidence Rate of Breast Cancer in Females",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "Breast Cancer in Females rate per 100,000",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-breast-cancer",
+          "zIndexPosition": "back",
+          "title": "Incidence Rate of Breast Cancer in Females by County",
+          "yearKey": "Period",
+          "subtitle": "Age-adjusted rate per 100,000 population",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/CancerCounty/MapServer/7"
+        }
+      ]
+    },
+    {
+      "set": "secondary",
+      "geometry": "Tract",
+      "outFields": ["GEOID", "TractCode", "TractName", "FullCounty", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "FullCounty",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "TractName",
+          "headerName": "Tract Name",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Incidence Rate of Breast Cancer in Females",
+      "popupContent": {
+        "title": {
+          "field": "PopupTitle"
+        },
+        "health": {
+          "name": "Breast Cancer in Females rate per 100,000",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "census-tract-breast-cancer",
+          "zIndexPosition": "back",
+          "title": "Incidence Rate of Breast Cancer in Females by Census Tract",
+          "yearKey": "Year",
+          "subtitle": "Age-adjusted rate per 100,000 population (2015-2019)",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/CancerCensusTract/MapServer/1"
+        },
+        {
+          "id": "county-outline-breast-cancer",
+          "zIndexPosition": "front",
+          "title": "",
+          "yearKey": "Year",
+          "subtitle": "",
+          "defaultVisible": true,
+          "sourceLayer": false,
+          "url": "/CountyBoundaries/MapServer/0"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "tabTitle": "Percent Enrolled Trend",
+  "tabPath": "percentEnrolledTrend",
+  "contentType": "chart",
+  "exportTitle": "Percent of Referred Children of New who were Enrolled within 90 days in Lead Home Visiting Program",
+  "exportSubtitle": "",
+  "chartType": "trendline",
+  "selectable": false,
+  "stratifiable": true,
+  "stratifications": [
+    {
+      "title": "Race/Ethnicity",
+      "field": "hvRace"
+    }
+  ],
+  "defaultSelection": "000",
+  "defaultSelectionName": "County",
+  "defaultSetNames": ["programRate"],
+  "baseline": "000",
+  "info": {
+    "title": "Percent of Referred Children who were Enrolled within 90 Days in Lead Home Visiting Program",
+    "id": "chart-lead-home-visiting-percent-enrolled-trend",
+    "subtitle": ""
+  },
+  "chartTitle": "Percent of Referred Children who were Enrolled in Lead Home Visiting Program",
+  "chartSubtitle": "Enrolled within 90 Days of Referral",
+  "displayChartTitle": true,
+  "displayChartSubtitle": true,
+  "displayXAxisLabel": true,
+  "xAxisLabel": "Period",
+  "displayYAxisLabel": true,
+  "displayChartDiscontinuityGraphic": false,
+  "omitCommunityProfile": true,
+  "yAxisLabel": "Percent of Children Enrolled",
+  "chartXAxisField": "yearAndMonths",
+  "chartDataSets": ["programRate"],
+  "url": "/Lead/GetHomeVisit",
+  "urlParams": [
+    {
+      "param": "type",
+      "value": "BLL_HV_EnrolledPercent"
+    }
+  ],
+  "chartConfig": {
+    "mainDatasets": [
+      {
+        "baseline": true,
+        "label": "Program-wide",
+        "setName": "programRate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      }
+    ],
+    "stratificationDatasets": [
+      {
+        "label": "Asian/PI NH",
+        "setName": "rateAsianPI",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "White NH",
+        "setName": "rateWhite",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "Black NH",
+        "setName": "rateBlack",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      },
+      {
+        "label": "Hispanic",
+        "setName": "rateHispanic",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 4,
+        "data": []
+      },
+      {
+        "label": "Other NH",
+        "setName": "rateOther",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 5,
+        "data": []
+      },
+      {
+        "label": "All",
+        "setName": "rateTotal",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 6,
+        "data": []
+      }
+    ]
+  },
+  "columnHeaders": [
+    {
+      "field": "yearAndMonths",
+      "headerName": "Period",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "programRate",
+      "headerName": "Program-wide",
+      "width": 140,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateAsianPI",
+      "headerName": "Asian/PI NH",
+      "stratification": "hvRace",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateWhite",
+      "headerName": "White NH",
+      "stratification": "hvRace",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateBlack",
+      "headerName": "Black NH",
+      "stratification": "hvRace",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateHispanic",
+      "headerName": "Hispanic",
+      "stratification": "hvRace",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateOther",
+      "headerName": "Other NH",
+      "stratification": "hvRace",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ],
+  "tableTitle": "Percent of Referred Children of New who were Enrolled within 90 days in Lead Home Visiting Program"
+}

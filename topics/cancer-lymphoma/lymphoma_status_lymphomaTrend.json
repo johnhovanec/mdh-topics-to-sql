@@ -1,0 +1,221 @@
+{
+  "tabTitle": "Trend",
+  "tabPath": "lymphomaTrend",
+  "contentType": "chart",
+  "exportTitle": "Age-Adjusted Incidence Rate of Non-Hodgkin Lymphoma",
+  "exportSubtitle": "Age-adjusted incidence rate per 100k population",
+  "chartType": "trendline",
+  "selectable": true,
+  "stratifiable": true,
+  "stratifications": [
+    {
+      "title": "Race",
+      "field": "CancerRace"
+    },
+    {
+      "title": "Sex",
+      "field": "sex"
+    }
+  ],
+  "defaultSelection": "000",
+  "defaultSetNames": ["stateRate"],
+  "baseline": "000",
+  "info": {
+    "title": "Rate of Non-Hodgkin Lymphoma",
+    "id": "chart-lymphoma-cancer-trend",
+    "subtitle": "Age-adjusted rate per 100,000"
+  },
+  "chartTitle": ["Age-Adjusted Incidence Rate of Non-Hodgkin Lymphoma"],
+  "chartSubtitle": "",
+  "displayChartTitle": true,
+  "displayChartSubtitle": false,
+  "displayYAxisLabel": true,
+  "displayXAxisLabel": true,
+  "displayChartDiscontinuityGraphic": false,
+  "yAxisLabel": "Age-adjusted incidence rate per 100,000 population",
+  "xAxisLabel": "Period",
+  "chartXAxisField": "year",
+  "chartDataSets": ["rate", "stateRate"],
+  "url": "/Cancer/GetRate",
+  "urlParams": [
+    {
+      "param": "jurisdiction",
+      "valueKey": "code"
+    },
+    {
+      "param": "type",
+      "value": "Cancer_LymphomaNonHodgkins_5yr"
+    }
+  ],
+  "chartConfig": {
+    "mainDatasets": [
+      {
+        "label": "County",
+        "setName": "rate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "baseline": true,
+        "label": "Statewide",
+        "setName": "stateRate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      }
+    ],
+    "stratificationDatasets": [
+      {
+        "label": "White",
+        "setName": "rateWhite",
+        "stratification": "CancerRace",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "Black",
+        "setName": "rateBlack",
+        "stratification": "CancerRace",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "All",
+        "setName": "rateTotal",
+        "baseline": true,
+        "stratification": "CancerRace",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 5,
+        "data": []
+      },
+      {
+        "label": "Female",
+        "setName": "rateFemale",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "Male",
+        "setName": "rateMale",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "All",
+        "baseline": true,
+        "setName": "rateTotal",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      }
+    ]
+  },
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Year",
+      "width": 115,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate",
+      "headerName": "County Rate",
+      "width": 134,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "stateRate",
+      "headerName": "Statewide Rate",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateWhite",
+      "headerName": "White",
+      "stratification": "CancerRace",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateBlack",
+      "headerName": "Black",
+      "stratification": "CancerRace",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMale",
+      "headerName": "Male",
+      "stratification": "sex",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFemale",
+      "headerName": "Female",
+      "stratification": "sex",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ],
+  "tableTitle": "Age-Adjusted Incidence Rate of Non-Hodgkin Lymphoma"
+}

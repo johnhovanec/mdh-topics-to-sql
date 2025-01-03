@@ -1,0 +1,295 @@
+{
+  "tabTitle": "Stratified County ED Table",
+  "tabPath": "stratifiedEDTable",
+  "contentType": "table",
+  "url": "/TBI/GetFiveYearCrudeRate?type=TBI_EDVisits_CrudeRate_5yr",
+  "info": {
+    "title": "Mean Annual Rate of TBI-related Emergency Department (ED) Visits",
+    "id": "table-cause-ED-trend",
+    "subtitle": "Unadjusted rate per 100,000 population in 5-year periods"
+  },
+  "tableTitle": "Mean Annual Rate of TBI-related Emergency Department (ED) Visits",
+  "tableSubtitle": "Unadjusted rate per 100,000 population in 5-year periods ",
+  "exportTitle": "Mean Annual Rate of TBI-related Emergency Department (ED) Visits",
+  "exportSubtitle": "Unadjusted rate per 100,000 population in 5-year periods",
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Period",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "jurisdiction",
+      "headerName": "County",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsMale",
+      "headerName": "Falls Male",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmMale",
+      "headerName": "Firearm Male",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleMale",
+      "headerName": "Motor Vehicle Male",
+      "width": 150,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsFemale",
+      "headerName": "Falls Female",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmFemale",
+      "headerName": "Firearm Female",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleFemale",
+      "headerName": "Motor Vehicle Female",
+      "width": 160,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsAgeUnder15",
+      "headerName": "Falls <15",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmAgeUnder15",
+      "headerName": "Fiream <15",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleAgeUnder15",
+      "headerName": "Motor Vehicle <15",
+      "width": 140,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsAge15to24",
+      "headerName": "Falls 15-24",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmAge15to24",
+      "headerName": "Fiream 15-24",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleAge15to24",
+      "headerName": "Motor Vehicle 15-24",
+      "width": 140,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsAge25to64",
+      "headerName": "Falls 25-64",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmAge25to64",
+      "headerName": "Fiream 25-64",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleAge25to64",
+      "headerName": "Motor Vehicle 25-64",
+      "width": 140,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsAge65Plus",
+      "headerName": "Falls 65+",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmAge65Plus",
+      "headerName": "Fiream 65+",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleAge65Plus",
+      "headerName": "Motor Vehicle 65+",
+      "width": 140,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsWhite",
+      "headerName": "Falls White",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmWhite",
+      "headerName": "Firearm White",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleWhite",
+      "headerName": "Motor Vehicle White",
+      "width": 140,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsBlack",
+      "headerName": "Falls Black",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmBlack",
+      "headerName": "Firearm Black",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleBlack",
+      "headerName": "Motor Vehicle Black",
+      "width": 140,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsOther",
+      "headerName": "Falls Other Races",
+      "width": 140,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmOther",
+      "headerName": "Firearm Other Races",
+      "width": 140,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleOther",
+      "headerName": "Motor Vehicle Other Races",
+      "width": 180,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsHispanic",
+      "headerName": "Falls Hispanic",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmHispanic",
+      "headerName": "Firearm Hispanic",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleHispanic",
+      "headerName": "Motor Vehicle Hispanic",
+      "width": 170,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFallsNonHispanic",
+      "headerName": "Falls Non-hispanic",
+      "width": 150,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearmNonHispanic",
+      "headerName": "Firearm Non-hispanic",
+      "width": 150,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicleNonHispanic",
+      "headerName": "Motor Vehicle Non-hispanic",
+      "width": 200,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    }
+  ]
+}

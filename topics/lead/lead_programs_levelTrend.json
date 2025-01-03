@@ -1,0 +1,241 @@
+{
+  "tabTitle": "Lead Level Trends",
+  "tabPath": "levelTrend",
+  "contentType": "chart",
+  "exportTitle": "Geometric Mean Blood Lead Level (µg/dL) for Children Under Age 6",
+  "chartType": "trendline",
+  "selectable": true,
+  "stratifiable": true,
+  "stratifications": [
+    {
+      "title": "Age",
+      "field": "age"
+    },
+    {
+      "title": "Sex",
+      "field": "sex"
+    }
+  ],
+  "defaultSelection": "000",
+  "defaultSetNames": ["stateRate"],
+  "baseline": "000",
+  "info": {
+    "title": "Geometric Mean",
+    "id": "chart-lead-geometric-mean-trend",
+    "subtitle": ""
+  },
+  "chartTitle": "Geometric Mean Blood Lead Level (µg/dL) for Children Under Age 6",
+  "displayChartTitle": true,
+  "displayYAxisLabel": true,
+  "displayXAxisLabel": true,
+  "displayChartDiscontinuityGraphic": false,
+  "yAxisLabel": "Micrograms per Deciliter",
+  "xAxisLabel": "Year",
+  "chartXAxisField": "year",
+  "chartDataSets": ["rate", "stateRate"],
+  "url": "/Lead/GetLeadGeoMean",
+  "urlParams": [
+    {
+      "param": "jurisdiction",
+      "valueKey": "code"
+    }
+  ],
+  "chartConfig": {
+    "mainDatasets": [
+      {
+        "label": "County",
+        "setName": "rate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "baseline": true,
+        "label": "Statewide",
+        "setName": "stateRate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      }
+    ],
+    "stratificationDatasets": [
+      {
+        "label": "Female",
+        "setName": "rateFemale",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "Male",
+        "setName": "rateMale",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "All",
+        "baseline": true,
+        "setName": "rateTotal",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 4,
+        "data": []
+      },
+      {
+        "label": "0 - <12 months",
+        "setName": "rate0to12",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "12 - <36 months",
+        "setName": "rate12to36",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "36 - <72 months",
+        "setName": "rate36to72",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      },
+      {
+        "label": "All Ages < 6 years",
+        "baseline": true,
+        "setName": "rateTotal",
+        "stratification": "age",
+        "title": "Age",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 4,
+        "data": []
+      }
+    ]
+  },
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Year",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate",
+      "headerName": "County Mean",
+      "width": 140,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "stateRate",
+      "headerName": "Statewide Mean",
+      "width": 170,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMale",
+      "headerName": "Male",
+      "stratification": "sex",
+      "exportHeader": "Statewide Rate of Childhood Testing",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFemale",
+      "headerName": "Female",
+      "stratification": "sex",
+      "exportHeader": "Statewide Rate of Childhood Testing",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate0to12",
+      "headerName": "0 - <12 months",
+      "stratification": "age",
+      "exportHeader": "Statewide Rate of Childhood Testing",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate12to36",
+      "headerName": "12 - <36 months",
+      "stratification": "age",
+      "exportHeader": "Statewide Rate of Childhood Testing",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate36to72",
+      "headerName": "36 - <72 months",
+      "stratification": "age",
+      "exportHeader": "Statewide Rate of Childhood Testing",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ],
+  "tableTitle": "Mean Childhood Blood Lead Level"
+}

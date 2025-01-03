@@ -1,0 +1,94 @@
+{
+  "tabTitle": "PM 2.5 Daily",
+  "tabPath": "pm25Daily",
+  "contentType": "map",
+  "timeSlider": true,
+  "contentTitle": "Fine Particulate Matter (PM2.5) Daily Design Values 2001 - 2020 ",
+  "exportTitle": "Fine Particulate Matter (PM2.5) Daily Design Values 2001 - 2020 ",
+  "exportSubtitle": "",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Rate of Emergency Department (ED) Visits for Carbon Monoxide (CO) Poisoning",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "additional": {
+          "name": "You cannot zoom into this map. Please see \"About\" for more information."
+        }
+      },
+      "setLayers": [
+        {
+          "id": "PM25-Daily-2001",
+          "zIndexPosition": "back",
+          "title": "Daily (24-hour) PM2.5 Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 35 micrograms per cubic meter (μg/m3) and below meet the 2006 standard (2001-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityPM25Daily/MapServer/2001"
+        },
+        {
+          "id": "PM25-Daily-2005",
+          "zIndexPosition": "back",
+          "title": "Daily (24-hour) PM2.5 Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 35 micrograms per cubic meter (μg/m3) and below meet the 2006 standard (2001-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityPM25Daily/MapServer/2005"
+        },
+        {
+          "id": "PM25-Daily-2010",
+          "zIndexPosition": "back",
+          "title": "Daily (24-hour) PM2.5 Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 35 micrograms per cubic meter (μg/m3) and below meet the 2006 standard (2001-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityPM25Daily/MapServer/2010"
+        },
+        {
+          "id": "PM25-Daily-2015",
+          "zIndexPosition": "back",
+          "title": "Daily (24-hour) PM2.5 Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 35 micrograms per cubic meter (μg/m3) and below meet the 2006 standard (2000-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityPM25Daily/MapServer/2015"
+        },
+        {
+          "id": "PM25-Daily-2020",
+          "zIndexPosition": "back",
+          "title": "Daily (24-hour) PM2.5 Design Value",
+          "yearKey": "Year",
+          "subtitle": "Values of 35 micrograms per cubic meter (μg/m3) and below meet the 2006 standard (2001-2020)",
+          "defaultVisible": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQualityPM25Daily/MapServer/2020"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "tabTitle": "Map",
+  "tabPath": "allCause",
+  "contentType": "map",
+  "contentTitle": "Age-Adjusted Incidence Rate of All Cause Cancer",
+  "exportTitle": "Age-Adjusted Incidence All Cause Cancer",
+  "exportSubtitle": "Age-adjusted incidence rate per 100k population (2015-2019) ",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Incidence Rate of All Cause Cancer",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "All Cause Cancer rate per 100,000",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-bladder-cancer",
+          "zIndexPosition": "back",
+          "title": "Incidence Rate of All Cause Cancer by County",
+          "yearKey": "Period",
+          "subtitle": "Age-adjusted rate per 100,000 population",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/CancerCounty/MapServer/4"
+        }
+      ]
+    },
+    {
+      "set": "secondary",
+      "geometry": "Tract",
+      "outFields": ["GEOID", "TractCode", "TractName", "FullCounty", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "FullCounty",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "TractName",
+          "headerName": "Tract Name",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Incidence Rate of All Cause Cancer",
+      "popupContent": {
+        "title": {
+          "field": "PopupTitle"
+        },
+        "health": {
+          "name": "All Cause Cancer rate per 100,000",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "census-tract-all-cause-cancer",
+          "zIndexPosition": "back",
+          "title": "Incidence Rate of All Cause Cancer by Census Tract",
+          "yearKey": "Year",
+          "subtitle": "Age-adjusted rate per 100,000 population (2015-2019)",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/CancerCensusTract/MapServer/0"
+        },
+        {
+          "id": "county-outline-all-cause-cancer",
+          "zIndexPosition": "front",
+          "title": "",
+          "yearKey": "Year",
+          "subtitle": "",
+          "defaultVisible": true,
+          "sourceLayer": false,
+          "url": "/CountyBoundaries/MapServer/0"
+        }
+      ]
+    }
+  ]
+}

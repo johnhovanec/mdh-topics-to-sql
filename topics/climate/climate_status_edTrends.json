@@ -1,0 +1,92 @@
+{
+  "tabTitle": "Heat Stress ED",
+  "tabPath": "edTrends",
+  "contentType": "chart",
+  "exportTitle": "Rate of Emergency Department (ED) Visits for Heat Stress",
+  "exportSubtitle": "Age-adjusted rate per 100k population ",
+  "chartType": "trendline",
+  "selectable": true,
+  "stratifiable": false,
+  "defaultStratification": null,
+  "stratifications": [],
+  "defaultSelection": "000",
+  "defaultSetNames": ["stateRate"],
+  "baseline": "000",
+  "info": {
+    "title": "Rate of Emergency Department (ED) Visits for Heat Stress",
+    "id": "chart-climate-emergency-room-trend",
+    "subtitle": "Age-adjusted rate per 100k population"
+  },
+  "chartTitle": "Rate of Emergency Department (ED) Visits for Heat Stress",
+  "chartSubtitle": "Data changed in late 2015. See 'About' for details.",
+  "displayChartTitle": true,
+  "displayChartSubtitle": true,
+  "displayYAxisLabel": true,
+  "displayXAxisLabel": true,
+  "displayChartDiscontinuityGraphic": true,
+  "yAxisLabel": "Age-adjusted rate per 100,000 population",
+  "xAxisLabel": "Year",
+  "chartXAxisField": "year",
+  "chartDataSets": ["rate", "stateRate"],
+  "url": "/Climate/GetHeatStressEDVisitRate",
+  "urlParams": [
+    {
+      "param": "jurisdiction",
+      "valueKey": "code"
+    }
+  ],
+  "chartConfig": {
+    "mainDatasets": [
+      {
+        "label": "County",
+        "setName": "rate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "baseline": true,
+        "label": "Statewide",
+        "setName": "stateRate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      }
+    ],
+    "stratificationDatasets": []
+  },
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Year",
+      "width": 85,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate",
+      "headerName": "County Rate",
+      "width": 134,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "stateRate",
+      "headerName": "Statewide Rate",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ],
+  "tableTitle": "Rate of Emergency Department (ED) Visits for Heat Stress "
+}

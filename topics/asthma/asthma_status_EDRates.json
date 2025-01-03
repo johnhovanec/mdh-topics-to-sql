@@ -1,0 +1,119 @@
+{
+  "tabTitle": "ED Rate",
+  "tabPath": "EDRates",
+  "contentType": "map",
+  "contentTitle": "Emergency Department (ED) Visits for Asthma",
+  "exportTitle": "Emergency Department (ED) Visits for Asthma",
+  "exportSubtitle": "Unadjusted rate of emergency department visits for asthma per 10,000 population.",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Unadjusted Emergency Department (ED) Visits for Asthma",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "Unadjusted Rate of Asthma Emergency Department (ED) Visits per 10,000",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-choropleth-asthma-ed-visits",
+          "zIndexPosition": "back",
+          "title": "Rate of Asthma ED Visits by County",
+          "yearKey": "Year",
+          "subtitle": "Unadjusted rate per 10,000 population",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/AsthmaCounty/MapServer/1"
+        }
+      ]
+    },
+    {
+      "set": "secondary",
+      "geometry": "Tract",
+      "outFields": ["GEOID", "TractCode", "TractName", "FullCounty", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "FullCounty",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "TractName",
+          "headerName": "Tract Name",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Unadjusted Rate of Asthma (ED) Visits by Census Tract",
+      "popupContent": {
+        "title": {
+          "field": "PopupTitle"
+        },
+        "health": {
+          "name": "Unadjusted Rate of Asthma Emergency Department (ED) Visits per 10,000",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "census-tract-asthma-ed-rates",
+          "zIndexPosition": "back",
+          "title": "Rate of Asthma ED Visits by Census Tract",
+          "yearKey": "Year",
+          "subtitle": "Unadjusted rate per 10,000 population",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/AsthmaCensusTract/MapServer/0"
+        },
+        {
+          "id": "county-outline-asthma-ed-rates",
+          "zIndexPosition": "front",
+          "title": "",
+          "yearKey": "Year",
+          "subtitle": "",
+          "defaultVisible": true,
+          "sourceLayer": false,
+          "url": "/CountyBoundaries/MapServer/0"
+        }
+      ]
+    }
+  ]
+}

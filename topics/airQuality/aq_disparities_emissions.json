@@ -1,0 +1,82 @@
+{
+  "tabTitle": "Emissions",
+  "tabPath": "emissions",
+  "contentType": "map",
+  "contentTitle": "Air Pollution Sources Permitted in Maryland",
+  "exportTitle": "Air Pollution Sources Permitted in Maryland",
+  "defaultTab": true,
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["master_ai_name", "air_code", "naic_description", "county"],
+      "columnHeaders": [
+        {
+          "field": "master_ai_name",
+          "headerName": "Source",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "air_code",
+          "headerName": "Permit Type",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "naic_description",
+          "headerName": "NAICS Description",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "county",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Air Pollution Sources Permitted in Maryland",
+      "popupContent": {
+        "title": {
+          "field": "master_ai_name"
+        },
+        "environment": {
+          "name": "Permit Type",
+          "field": "air_code",
+          "className": "field-value-align-left",
+          "unit": ""
+        },
+        "health": {
+          "name": "County",
+          "field": "county",
+          "className": "field-value-align-left",
+          "unit": ""
+        },
+        "additional": {
+          "name": "NAICS Description",
+          "field": "naic_description",
+          "className": "field-value-align-left",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-emissions-sites",
+          "zIndexPosition": "back",
+          "title": "Air Pollution Sources Permitted in Maryland",
+          "yearKey": "emission_year",
+          "subtitle": "",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "omitCommunityProfile": true,
+          "url": "https://mdewin64.mde.state.md.us/arcgis/rest/services/MDE_ETS/ActiveHighAirEmissions2021/MapServer/0"
+        }
+      ]
+    }
+  ]
+}

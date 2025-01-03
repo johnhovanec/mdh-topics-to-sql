@@ -1,0 +1,82 @@
+{
+  "tabTitle": "Monitors",
+  "tabPath": "monitors",
+  "contentType": "map",
+  "contentTitle": "Ambient Air Monitoring Network",
+  "exportTitle": "Ambient Air Monitoring Network",
+  "exportSubtitle": "",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "Point",
+      "outFields": ["Site_Name", "Monitor_Count", "Monitor_Types", "County"],
+      "columnHeaders": [
+        {
+          "field": "Site_Name",
+          "headerName": "Site",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Monitor_Count",
+          "headerName": "Monitor Count",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Monitor_Types",
+          "headerName": "Monitor Types",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Ambient Air Monitoring Network",
+      "popupContent": {
+        "title": {
+          "field": "Site_Name"
+        },
+        "environment": {
+          "name": "Monitor Count",
+          "field": "Monitor_Count",
+          "className": "field-value-align-left",
+          "unit": ""
+        },
+        "secondary": {
+          "name": "Monitor Types",
+          "field": "Monitor_Types",
+          "className": "field-value-align-left",
+          "unit": ""
+        },
+        "health": {
+          "name": "County",
+          "field": "County",
+          "className": "field-value-align-left",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-air-quality-monitors",
+          "zIndexPosition": "back",
+          "title": "Ambient Air Monitoring Sites",
+          "yearKey": "Network_Plan_Year",
+          "subtitle": "",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "omitCommunityProfile": true,
+          "url": "/AirQuality/MapServer/0"
+        }
+      ]
+    }
+  ]
+}

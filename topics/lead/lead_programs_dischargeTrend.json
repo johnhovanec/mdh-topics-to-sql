@@ -1,0 +1,262 @@
+{
+  "tabTitle": "Discharge Trend",
+  "tabPath": "dischargeTrend",
+  "contentType": "chart",
+  "exportTitle": "Number of Discharges from Lead Home Visiting Program",
+  "exportSubtitle": "",
+  "chartType": "trendline",
+  "selectable": false,
+  "stratifiable": true,
+  "stratifications": [
+    {
+      "title": "Race/Ethnicity",
+      "field": "hvRace"
+    },
+    {
+      "title": "Blood Lead Level",
+      "field": "bllType"
+    }
+  ],
+  "defaultSelection": "000",
+  "defaultSelectionName": "County",
+  "defaultSetNames": ["programCount"],
+  "baseline": "000",
+  "info": {
+    "title": "Number of Discharges from Lead Home Visiting Program",
+    "id": "chart-lead-home-visiting-discharge-trend",
+    "subtitle": ""
+  },
+  "chartTitle": "Number of Discharges from Lead Home Visiting Program",
+  "displayChartTitle": true,
+  "displayXAxisLabel": true,
+  "xAxisLabel": "Period",
+  "displayYAxisLabel": true,
+  "displayChartDiscontinuityGraphic": false,
+  "omitCommunityProfile": true,
+  "yAxisLabel": "Number Discharged",
+  "chartXAxisField": "yearAndMonths",
+  "chartDataSets": ["programCount"],
+  "url": "/Lead/GetHomeVisit",
+  "urlParams": [
+    {
+      "param": "type",
+      "value": "BLL_HV_Discharged"
+    }
+  ],
+  "chartConfig": {
+    "mainDatasets": [
+      {
+        "baseline": true,
+        "label": "Program-wide",
+        "setName": "programCount",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      }
+    ],
+    "stratificationDatasets": [
+      {
+        "label": "Asian/PI NH",
+        "setName": "countAsianPI",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "White NH",
+        "setName": "countWhite",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "Black NH",
+        "setName": "countBlack",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      },
+      {
+        "label": "Hispanic",
+        "setName": "countHispanic",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 4,
+        "data": []
+      },
+      {
+        "label": "Other NH",
+        "setName": "countOther",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 5,
+        "data": []
+      },
+      {
+        "label": "All",
+        "setName": "countTotal",
+        "stratification": "hvRace",
+        "title": "Race/Ethnicity",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 6,
+        "data": []
+      },
+      {
+        "label": "5 - <10 µg/dL",
+        "setName": "countbll5to10",
+        "stratification": "bllType",
+        "title": "Blood Lead Level",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "10+ µg/dL",
+        "setName": "countbll10Plus",
+        "stratification": "bllType",
+        "title": "Blood Lead Level",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "All",
+        "setName": "countTotal",
+        "stratification": "bllType",
+        "title": "Blood Lead Level",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      }
+    ]
+  },
+  "columnHeaders": [
+    {
+      "field": "yearAndMonths",
+      "headerName": "Period",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "programCount",
+      "headerName": "Program-wide",
+      "width": 140,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "countAsianPI",
+      "headerName": "Asian/PI NH",
+      "stratification": "hvRace",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "countWhite",
+      "headerName": "White NH",
+      "stratification": "hvRace",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "countBlack",
+      "headerName": "Black NH",
+      "stratification": "hvRace",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "countHispanic",
+      "headerName": "Hispanic",
+      "stratification": "hvRace",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "countOther",
+      "headerName": "Other NH",
+      "stratification": "hvRace",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "countbll5to10",
+      "headerName": "5 - <10 µg/dL",
+      "stratification": "bllType",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "countbll10Plus",
+      "headerName": "10+ µg/dL",
+      "stratification": "bllType",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ],
+  "tableTitle": "Number of Discharges from Lead Home Visiting Program"
+}

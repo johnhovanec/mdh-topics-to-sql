@@ -1,0 +1,63 @@
+{
+  "tabTitle": "County Hosp. Table",
+  "tabPath": "causeHospTable",
+  "contentType": "table",
+  "url": "/TBI/GetThreeYearCrudeRateCause?type=TBI_Hospitalizations_CrudeRate_3yr",
+  "info": {
+    "title": "Cause ED Table",
+    "id": "table-cause-ED-trend",
+    "subtitle": "Unadjusted rate per 100,000 population in 3-year periods"
+  },
+  "tableTitle": "Mean Annual Rate of TBI-related Hospitalizations",
+  "tableSubtitle": "Unadjusted rate per 100,000 population in 3-year periods",
+  "exportTitle": "Mean Annual Rate of TBI-related Hospitalizations",
+  "exportSubtitle": "Unadjusted rate per 100k population in 3-year periods",
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Period",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "jurisdiction",
+      "headerName": "County",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate",
+      "headerName": "Total",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFalls",
+      "headerName": "Falls",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFirearm",
+      "headerName": "Firearm",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMotorVehicle",
+      "headerName": "Motor Vehicle",
+      "width": 120,
+      "align": "left",
+      "customFormat": 2,
+      "headerAlign": "left"
+    }
+  ]
+}

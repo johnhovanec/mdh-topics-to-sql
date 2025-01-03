@@ -1,0 +1,56 @@
+{
+  "tabTitle": "AML Map",
+  "tabPath": "acuteMyeloid",
+  "contentType": "map",
+  "contentTitle": "Age-Adjusted Incidence Rate of Acute Myeloid Leukemia (AML) in Children under 20",
+  "exportTitle": "Age-Adjusted Incidence Rate of Acute Myeloid Leukemia (AML) in Children",
+  "exportSubtitle": "Age-adjusted incidence rate per 1 million population (2015-2019)",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "flex": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "flex": 1,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Age-Adjusted Incidence Rate of Acute Myeloid Leukemia (AML) in Children",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "Acute Myeloid Leukemia rate per 1,000,000",
+          "field": "Rate",
+          "unit": ""
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-acute-myeloid-children-cancer",
+          "zIndexPosition": "back",
+          "title": "Incidence Rate of Acute Myeloid Leukemia in Children by County",
+          "yearKey": "Period",
+          "subtitle": "Age-adjusted rate per 1,000,000 population",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/CancerCounty/MapServer/3"
+        }
+      ]
+    }
+  ]
+}

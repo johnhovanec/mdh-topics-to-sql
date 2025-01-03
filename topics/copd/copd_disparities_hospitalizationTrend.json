@@ -1,0 +1,242 @@
+{
+  "tabTitle": "Hospitalization Trend",
+  "tabPath": "hospitalizationTrend",
+  "contentType": "chart",
+  "exportTitle": "Age-Adjusted Rate of Hospitalizations for COPD, Age 25 and Older",
+  "exportSubtitle": "Age-adjusted rate per 10k population",
+  "chartType": "trendline",
+  "selectable": false,
+  "stratifiable": true,
+  "stratifications": [
+    {
+      "title": "Race/Ethnicity",
+      "field": "race"
+    },
+    {
+      "title": "Sex",
+      "field": "sex"
+    }
+  ],
+  "defaultSelection": "000",
+  "defaultSetNames": ["stateRate"],
+  "baseline": "000",
+  "info": {
+    "title": "Age-adjusted Rate of Hospitalization for COPD Among Persons 25 and Over per 10,000 Population",
+    "id": "chart-copd-age-adjusted-rate",
+    "subtitle": ""
+  },
+  "chartTitle": "Age-Adjusted Rate of Hospitalizations for COPD, Age 25 and Older",
+  "chartSubtitle": "Data changed in late 2015. See 'About' for details.",
+  "displayChartTitle": true,
+  "displayChartSubtitle": true,
+  "displayYAxisLabel": true,
+  "displayXAxisLabel": true,
+  "displayChartDiscontinuityGraphic": true,
+  "yAxisLabel": "Age-adjusted rate per 10,000 population",
+  "xAxisLabel": "Year",
+  "chartXAxisField": "year",
+  "chartDataSets": ["rate", "stateRate"],
+  "url": "/COPD/GetHospitalizationAgeAdjRate",
+  "urlParams": [
+    {
+      "param": "jurisdiction",
+      "valueKey": "code"
+    }
+  ],
+  "chartConfig": {
+    "mainDatasets": [
+      {
+        "baseline": true,
+        "label": "Statewide",
+        "setName": "stateRate",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      }
+    ],
+    "stratificationDatasets": [
+      {
+        "label": "White NH",
+        "setName": "rateWhite",
+        "stratification": "race",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "Black NH",
+        "setName": "rateBlack",
+        "stratification": "race",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "Hispanic",
+        "setName": "rateHispanic",
+        "stratification": "race",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      },
+      {
+        "label": "Other NH",
+        "setName": "rateOther",
+        "stratification": "race",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 4,
+        "data": []
+      },
+      {
+        "label": "All",
+        "setName": "rateTotal",
+        "baseline": true,
+        "stratification": "race",
+        "title": "Race",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 5,
+        "data": []
+      },
+      {
+        "label": "Female",
+        "setName": "rateFemale",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 1,
+        "data": []
+      },
+      {
+        "label": "Male",
+        "setName": "rateMale",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 2,
+        "data": []
+      },
+      {
+        "label": "All",
+        "baseline": true,
+        "setName": "rateTotal",
+        "stratification": "sex",
+        "title": "Sex",
+        "fill": false,
+        "pointRadius": 3,
+        "pointBorderWidth": 3,
+        "pointHoverRadius": 8,
+        "lineTension": 0,
+        "order": 3,
+        "data": []
+      }
+    ]
+  },
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Year",
+      "width": 85,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "stateRate",
+      "headerName": "Statewide Rate",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateWhite",
+      "headerName": "White NH",
+      "stratification": "race",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateBlack",
+      "headerName": "Black NH",
+      "stratification": "race",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateHispanic",
+      "headerName": "Hispanic",
+      "stratification": "race",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateOther",
+      "headerName": "Other NH",
+      "stratification": "race",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFemale",
+      "headerName": "Female",
+      "stratification": "sex",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMale",
+      "headerName": "Male",
+      "stratification": "sex",
+      "width": 160,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ],
+  "tableTitle": "Age-Adjusted Rate of Hospitalizations for COPD, Age 25 and Older"
+}

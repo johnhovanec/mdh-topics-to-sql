@@ -1,0 +1,148 @@
+{
+  "tabTitle": "Testing Table",
+  "tabPath": "testingTable",
+  "contentType": "table",
+  "url": "/Lead/GetLeadPercentTestedAllJurisdictions",
+  "info": {
+    "title": "Testing Table",
+    "id": "table-lead-percent-tested-trend",
+    "subtitle": "Age-adjusted rate per 10,000"
+  },
+  "tableTitle": "Percent of Children Under Age 6 Tested for Lead",
+  "exportTitle": "Percent of Children Under Age 6 Tested for Lead",
+  "exportSubtitle": "*Effective October 1 2019 the legal definition of an​ elevated blood lead level in Maryland is the same as the clinical definition: 5 micrograms per deciliter (µg/dL). Children tested are aged 6 and younger.",
+  "stratifications": [
+    {
+      "title": "Age",
+      "field": "age"
+    },
+    {
+      "title": "Sex",
+      "field": "sex"
+    }
+  ],
+  "baseline": "000",
+  "columnHeaders": [
+    {
+      "field": "yearsend",
+      "headerName": "Year",
+      "width": 120,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "jurisdiction",
+      "headerName": "County",
+      "width": 140,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateTotal",
+      "headerName": "Total 0 - <72 mo.",
+      "width": 170,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFemale",
+      "headerName": "Female 0 - <72 mo.",
+      "stratification": "sex",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMale",
+      "headerName": "Male 0 - <72 mo.",
+      "stratification": "sex",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate0to12",
+      "headerName": "Total 0 - <12 mo.",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFemale0to12",
+      "headerName": "Female 0 - <12 mo.",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMale0to12",
+      "headerName": "Male 0 - <12 mo.",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate12to36",
+      "headerName": "Total 12 - <36 mo.",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFemale12to36",
+      "headerName": "Female 12 - <36 mo.",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMale12to36",
+      "headerName": "Male 12 - <36 mo.",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rate36to72",
+      "headerName": "Total 36 - <72 mo.",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateFemale36to72",
+      "headerName": "Female 36 - <72 mo.",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "rateMale36to72",
+      "headerName": "Male 36 - <72 mo.",
+      "stratification": "age",
+      "width": 150,
+      "customFormat": 2,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ]
+}

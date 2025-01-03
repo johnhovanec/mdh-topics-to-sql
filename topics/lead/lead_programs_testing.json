@@ -1,0 +1,224 @@
+{
+  "tabTitle": "Testing",
+  "tabPath": "testing",
+  "contentType": "map",
+  "contentTitle": "Percent of Children Tested for Lead in Maryland",
+  "exportTitle": "Percent of Children Tested for Lead",
+  "exportSubtitle": "*Effective October 1 2019 the legal definition of an​ elevated blood lead level in Maryland is the same as the clinical definition: 5 micrograms per deciliter (µg/dL). Children tested are aged 6 and younger.",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Counts", "Rate"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "width": 133,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Counts",
+          "headerName": "Tested (#)",
+          "exportHeaderName": "Number Tested",
+          "width": 130,
+          "customFormat": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Tested (%)",
+          "exportHeaderName": "Percent Tested",
+          "width": 140,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Testing (County)",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "Percent of children under age 6 tested for lead",
+          "field": "Rate",
+          "unit": "%"
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-choropleth-bll-tested-rate",
+          "zIndexPosition": "back",
+          "title": "Tested by County",
+          "yearKey": "Year",
+          "subtitle": "% of children under age 6 tested for lead",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/LeadCounty/MapServer/6"
+        },
+        {
+          "id": "reference-point-layer-schools",
+          "scaleDependent": false,
+          "referenceLayer": true,
+          "toggleable": true,
+          "custom": true,
+          "zIndexPosition": "front",
+          "isModern": false,
+          "title": "Public Schools",
+          "subtitle": "K-12",
+          "defaultVisible": false,
+          "omitCommunityProfile": true,
+          "url": "https://geodata.md.gov/imap/rest/services/Education/MD_EducationFacilities/FeatureServer/5",
+          "symbolDescription": "school",
+          "content": {
+            "title": "SCHOOL_NAME",
+            "line1": "STREET",
+            "line2A": "CITY",
+            "line2B": ", MD ",
+            "line3": "ZIP"
+          },
+          "drawingInfo": {
+            "renderer": {
+              "type": "simple",
+              "symbol": {
+                "type": "esriPMS",
+                "url": "",
+                "imageData": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTFwdCIgaGVpZ2h0PSIxNnB0IiB2aWV3Qm94PSIwIDAgMTEgMTYiIHZlcnNpb249IjEuMSI+CjxnIGlkPSJzdXJmYWNlMSI+CjxwYXRoIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtmaWxsOnJnYigwJSwwJSwwJSk7ZmlsbC1vcGFjaXR5OjAuNDU0MTY0O3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZTpyZ2IoMTAwJSwxMDAlLDEwMCUpO3N0cm9rZS1vcGFjaXR5OjAuODtzdHJva2UtbWl0ZXJsaW1pdDo0OyIgZD0iTSAxMDEuOTk5OTE1IDAuMDAxNDAwMzkgQyA5OC42ODc3NCAwLjAwMTQwMDM5IDk2LjAwMDAzMyAyLjY4NTUxNyA5Ni4wMDAwMzMgNS45OTgxNiBDIDk2LjAwMDAzMyA2LjkzMDY0NiA5Ni4yMDk4NTQgNy44MDY0NjEgOTYuNTg5NTMgOC41ODk1NDMgQyA5Ni42MDk1MTMgOC42MzU5MSAxMDEuOTk5OTE1IDE5LjIwMjM2NiAxMDEuOTk5OTE1IDE5LjIwMjM2NiBMIDEwNy4zNDUzNTUgOC43MjM0OTIgQyAxMDcuNzY0OTk3IDcuOTA0MzQ3IDEwNy45OTk3OTcgNi45ODIxNjUgMTA3Ljk5OTc5NyA1Ljk5ODE2IEMgMTA3Ljk5OTc5NyAyLjY4NTUxNyAxMDUuMzEyMDg5IDAuMDAxNDAwMzkgMTAxLjk5OTkxNSAwLjAwMTQwMDM5IFogTSAxMDEuOTk5OTE1IDAuMDAxNDAwMzkgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjc4MTkxNiwwLDAsMC43NTgyMjIsLTc0LjE3NzI4MiwwLjQyMDgxMykiLz4KPC9nPgo8L3N2Zz4K",
+                "contentType": "image/svg+xml",
+                "width": 15,
+                "height": 15,
+                "angle": 0,
+                "xoffset": 0,
+                "yoffset": 0
+              },
+              "label": "",
+              "description": "custom marker for schools"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "set": "secondary",
+      "geometry": "Tract",
+      "outFields": [
+        "GEOID",
+        "TractCode",
+        "TractName",
+        "FullCounty",
+        "Counts",
+        "Rate"
+      ],
+      "columnHeaders": [
+        {
+          "field": "FullCounty",
+          "headerName": "County",
+          "align": "left",
+          "width": 200,
+          "headerAlign": "left"
+        },
+        {
+          "field": "TractName",
+          "headerName": "Tract Name",
+          "align": "left",
+          "width": 200,
+          "headerAlign": "left"
+        },
+        {
+          "field": "Counts",
+          "headerName": "Tested (#)",
+          "exportHeaderName": "Number Tested",
+          "width": 130,
+          "customFormat": 1,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Tested (%)",
+          "exportHeaderName": "Percent Tested",
+          "width": 140,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Poverty and Lead by Census Tract",
+      "popupContent": {
+        "title": {
+          "field": "PopupTitle"
+        },
+        "health": {
+          "name": "Percent of children under age 6 tested for lead",
+          "field": "Rate",
+          "unit": "%"
+        }
+      },
+      "setLayers": [
+        {
+          "id": "census-choropleth-bll-tested-rate",
+          "zIndexPosition": "back",
+          "title": "Tested by Census Tract",
+          "yearKey": "Year",
+          "subtitle": "% of children under age 6 tested for lead",
+          "defaultVisible": true,
+          "sourceLayer": true,
+          "url": "/LeadCensusTract/MapServer/5"
+        },
+        {
+          "id": "reference-point-layer-schools",
+          "scaleDependent": false,
+          "referenceLayer": true,
+          "toggleable": true,
+          "custom": true,
+          "zIndexPosition": "front",
+          "isModern": false,
+          "title": "Public Schools",
+          "subtitle": "K-12",
+          "defaultVisible": false,
+          "omitCommunityProfile": true,
+          "url": "https://geodata.md.gov/imap/rest/services/Education/MD_EducationFacilities/FeatureServer/5",
+          "symbolDescription": "school",
+          "content": {
+            "title": "SCHOOL_NAME",
+            "line1": "STREET",
+            "line2A": "CITY",
+            "line2B": ", MD ",
+            "line3": "ZIP"
+          },
+          "drawingInfo": {
+            "renderer": {
+              "type": "simple",
+              "symbol": {
+                "type": "esriPMS",
+                "url": "",
+                "imageData": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTFwdCIgaGVpZ2h0PSIxNnB0IiB2aWV3Qm94PSIwIDAgMTEgMTYiIHZlcnNpb249IjEuMSI+CjxnIGlkPSJzdXJmYWNlMSI+CjxwYXRoIHN0eWxlPSJmaWxsLXJ1bGU6ZXZlbm9kZDtmaWxsOnJnYigwJSwwJSwwJSk7ZmlsbC1vcGFjaXR5OjAuNDU0MTY0O3N0cm9rZS13aWR0aDoxO3N0cm9rZS1saW5lY2FwOmJ1dHQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO3N0cm9rZTpyZ2IoMTAwJSwxMDAlLDEwMCUpO3N0cm9rZS1vcGFjaXR5OjAuODtzdHJva2UtbWl0ZXJsaW1pdDo0OyIgZD0iTSAxMDEuOTk5OTE1IDAuMDAxNDAwMzkgQyA5OC42ODc3NCAwLjAwMTQwMDM5IDk2LjAwMDAzMyAyLjY4NTUxNyA5Ni4wMDAwMzMgNS45OTgxNiBDIDk2LjAwMDAzMyA2LjkzMDY0NiA5Ni4yMDk4NTQgNy44MDY0NjEgOTYuNTg5NTMgOC41ODk1NDMgQyA5Ni42MDk1MTMgOC42MzU5MSAxMDEuOTk5OTE1IDE5LjIwMjM2NiAxMDEuOTk5OTE1IDE5LjIwMjM2NiBMIDEwNy4zNDUzNTUgOC43MjM0OTIgQyAxMDcuNzY0OTk3IDcuOTA0MzQ3IDEwNy45OTk3OTcgNi45ODIxNjUgMTA3Ljk5OTc5NyA1Ljk5ODE2IEMgMTA3Ljk5OTc5NyAyLjY4NTUxNyAxMDUuMzEyMDg5IDAuMDAxNDAwMzkgMTAxLjk5OTkxNSAwLjAwMTQwMDM5IFogTSAxMDEuOTk5OTE1IDAuMDAxNDAwMzkgIiB0cmFuc2Zvcm09Im1hdHJpeCgwLjc4MTkxNiwwLDAsMC43NTgyMjIsLTc0LjE3NzI4MiwwLjQyMDgxMykiLz4KPC9nPgo8L3N2Zz4K",
+                "contentType": "image/svg+xml",
+                "width": 15,
+                "height": 15,
+                "angle": 0,
+                "xoffset": 0,
+                "yoffset": 0
+              },
+              "label": "",
+              "description": "custom marker for schools"
+            }
+          }
+        },
+        {
+          "id": "county-outline-asthma-ed-rates",
+          "zIndexPosition": "front",
+          "title": "",
+          "yearKey": "Year",
+          "subtitle": "",
+          "defaultVisible": true,
+          "sourceLayer": false,
+          "url": "/CountyBoundaries/MapServer/0"
+        }
+      ]
+    }
+  ]
+}

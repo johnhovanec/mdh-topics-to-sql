@@ -46,7 +46,7 @@ const data = readAndParseJSFile(filePath);
 // Tabs
 /***********************************************************************************************************************/
 
-const theme_ID = 12;
+const theme_ID = 48;
 const tabTitle = format(data.tabTitle ?? null);
 const tabPath = format(data.tabPath ?? null);
 const contentType = format(data.contentType ?? null);
@@ -81,6 +81,12 @@ const displayYAxisLabel = data.displayYAxisLabel === true ? 1 : 0;
 const yAxisLabel = format(data.yAxisLabel ?? null);
 const chartXAxisField = format(data.chartXAxisField ?? null);
 const defaultStratification = format(data.defaultStratification ?? null);
+const timeSlider = data.timeSlider === true ? 1 : 0;
+const highContrastPalette = data.highContrastPalette === true ? 1 : 0;
+const yAxisLabelLeft = format(data.yAxisLabelLeft ?? null);
+const yAxisLabelRight = format(data.yAxisLabelRight ?? null);
+const yAxisIdLeft = format(data.yAxisIdLeft ?? null);
+const yAxisIdRight = format(data.yAxisIdRight ?? null);
 
 if (!tabPath) {
   throw Error("tabPath must be defined");
@@ -96,7 +102,8 @@ const tabCmd = `INSERT INTO epht.Config_Tab_Test VALUES
     ${stratifiable}, ${chartSubtitle}, ${tableSubtitle}, ${defaultTab},
     ${textHeader}, ${textSubheading}, ${textBody}, ${exportSubtitle},
     ${contentTitle}, ${displayChartSubtitle}, ${displayYAxisLabel}, ${yAxisLabel},
-    ${chartXAxisField}, ${defaultStratification}
+    ${chartXAxisField}, ${defaultStratification}, ${timeSlider}, ${highContrastPalette},
+    ${yAxisLabelLeft}, ${yAxisLabelRight}, ${yAxisIdLeft}, ${yAxisIdRight}
 )\n`;
 
 console.log(tabCmd);
@@ -104,7 +111,7 @@ console.log(tabCmd);
 /***********************************************************************************************************************/
 // Once the tab is created all chart configs will use the same Tab_Id
 // tab = 21
-const tab_ID = 28;
+const tab_ID = 113;
 /***********************************************************************************************************************/
 
 /***********************************************************************************************************************/
@@ -112,7 +119,7 @@ const tab_ID = 28;
 /***********************************************************************************************************************/
 /***********************************************************************************************************************/
 // Once the mapset is created all map configs will use the same mapSet_ID
-const mapSet_ID = 10;
+const mapSet_ID = 54;
 /***********************************************************************************************************************/
 
 const mapSets = data?.mapSets;
@@ -134,7 +141,9 @@ if (mapSets != null) {
 
   const mapSetCmd = `INSERT INTO epht.Config_Tab_MapSet_Test VALUES
 ${values}\n`;
-
+  console.log(
+    "\nNote: this the last output to the console, but should be run before other MapSet table updates."
+  );
   console.log(mapSetCmd);
 }
 
@@ -224,6 +233,7 @@ function getSetLayers(mapSet) {
 
   if (setLayers != null) {
     let values = setLayers.map((set) => {
+      getDrawingInfo(set);
       let id = format(set.id ?? null);
       let title = format(set.title ?? null);
       let subTitle = format(set.subtitle ?? null);
@@ -254,6 +264,45 @@ function getSetLayers(mapSet) {
 ${values}`;
 
     console.log(setLayersCmd);
+  }
+}
+
+/***********************************************************************************************************************/
+// Maps: DrawingInfo
+/***********************************************************************************************************************/
+
+function getDrawingInfo(setLayer) {
+  const drawingInfo = setLayer?.drawingInfo;
+
+  if (drawingInfo != null || drawingInfo != undefined) {
+    function getValues() {
+      let drawingInfo_ID = 70; // Must set this to match the id generated in the db
+      let rendererType = format(drawingInfo.renderer.type ?? null);
+      let symbolType = format(drawingInfo.renderer.symbol.type ?? null);
+      let symbolUrl = format(drawingInfo.renderer.symbol.url ?? null);
+      let symbolImageData = format(
+        drawingInfo.renderer.symbol.imageData ?? null
+      );
+      let symbolContentType = format(
+        drawingInfo.renderer.symbol.contentType ?? null
+      );
+      let symbolWidth = drawingInfo.renderer.symbol.width ?? 0;
+      let symbolHeight = drawingInfo.renderer.symbol.height ?? 0;
+      let symbolAngle = drawingInfo.renderer.symbol.angle ?? 0;
+      let symbolXOffset = drawingInfo.renderer.symbol.xoffset ?? 0;
+      let symbolYOffset = drawingInfo.renderer.symbol.yoffset ?? 0;
+      let rendererLabel = format(drawingInfo.renderer.label ?? null);
+      let rendererDescription = format(
+        drawingInfo.renderer.description ?? null
+      );
+
+      return `(${drawingInfo_ID}, ${rendererType}, ${symbolType}, ${symbolUrl}, ${symbolImageData},
+                ${symbolContentType}, ${symbolWidth}, ${symbolHeight}, ${symbolAngle},
+                ${symbolXOffset}, ${symbolYOffset}, ${rendererLabel}, ${rendererDescription})\n`;
+    }
+    const drawingInfoCmd = `INSERT INTO epht.Config_SetLayer_DrawingInfo_Test VALUES 
+${getValues()}`;
+    console.log(drawingInfoCmd);
   }
 }
 
@@ -328,7 +377,7 @@ if (stratifications != null) {
   const stratificationsCmd = `INSERT INTO epht.Config_Tab_Stratification_Test VALUES
 ${setNames}`;
 
-  console.log(stratificationsCmd);
+  setNames.length > 0 ? console.log(stratificationsCmd) : null;
 }
 
 /***********************************************************************************************************************/
@@ -398,7 +447,7 @@ if (chartConfig != null) {
 
 const columnHeaders = data?.columnHeaders;
 
-if (chartConfig != null) {
+if (chartConfig != null && data.contentType === "chart") {
   let headers = columnHeaders.map((header) => {
     let field = format(header.field ?? null);
     let headerName = format(header.headerName ?? null);
@@ -422,7 +471,7 @@ if (chartConfig != null) {
 /***********************************************************************************************************************/
 const tableColumnHeaders = data?.columnHeaders;
 
-if (tableColumnHeaders != null) {
+if (tableColumnHeaders != null && data.contentType === "table") {
   let headers = tableColumnHeaders.map((header) => {
     let field = format(header.field ?? null);
     let headerName = format(header.headerName ?? null);

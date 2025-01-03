@@ -1,0 +1,90 @@
+{
+  "tabTitle": "Trends",
+  "tabPath": "trends",
+  "contentType": "chart",
+  "exportTitle": "Elevated Blood Lead in Children under age 6 and Childhood Testing",
+  "exportSubtitle": "*Effective October 1 2019 the legal definition of an​ elevated blood lead level in Maryland is the same as the clinical definition: 5 micrograms per deciliter (µg/dL). Children tested are aged 6 and younger.",
+  "chartType": "mixed",
+  "selectable": true,
+  "defaultSelection": "000",
+  "defaultSelectionName": "Statewide",
+  "defaultSetNames": ["countElevated", "countTested"],
+  "info": {
+    "title": "Childhood Lead Trend",
+    "id": "chart-lead-trends",
+    "subtitle": "% elevated blood lead and total tested"
+  },
+  "chartTitle": [
+    "Elevated Blood Lead and Childhood Testing",
+    "(Under age 6,  blood lead levels  ≥ 5 µg/dL)"
+  ],
+  "displayChartTitle": true,
+  "displayXAxisLabel": true,
+  "xAxisLabel": "Year",
+  "chartXAxisField": "year",
+  "displayYAxisLabel": true,
+  "displayChartDiscontinuityGraphic": false,
+  "yAxisLabelLeft": "Number Tested",
+  "yAxisLabelRight": "Number with Elevated Blood Lead",
+  "yAxisIdLeft": "tested",
+  "yAxisIdRight": "elevated",
+  "chartDataSets": ["countElevated", "countTested"],
+  "url": "/Lead/GetLeadTestedAndElevated",
+  "urlParams": [
+    {
+      "param": "jurisdiction"
+    }
+  ],
+  "chartConfig": [
+    {
+      "setName": "countElevated",
+      "label": "Elevated Blood Lead",
+      "yAxisID": "elevated",
+      "type": "line",
+      "fill": true,
+      "pointRadius": 3,
+      "pointBorderWidth": 3,
+      "pointHoverRadius": 8,
+      "pointHoverBorderWidth": 3,
+      "lineTension": 0,
+      "borderWidth": 3,
+      "data": []
+    },
+    {
+      "setName": "countTested",
+      "label": "Tested",
+      "yAxisID": "tested",
+      "type": "bar",
+      "fill": false,
+      "data": []
+    }
+  ],
+  "columnHeaders": [
+    {
+      "field": "year",
+      "headerName": "Year",
+      "width": 90,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "countTested",
+      "headerName": "Tested (#)",
+      "exportHeaderName": "Number Tested",
+      "width": 130,
+      "customFormat": 1,
+      "align": "left",
+      "headerAlign": "left"
+    },
+    {
+      "field": "countElevated",
+      "headerName": "Elevated (#)",
+      "exportHeaderName": "Number Elevated",
+      "width": 140,
+      "customFormat": 1,
+      "align": "left",
+      "headerAlign": "left"
+    }
+  ],
+  "tableTitle": "Childhood Lead Testing and Elevated Levels"
+}

@@ -1,0 +1,81 @@
+{
+  "tabTitle": "Current Smokers",
+  "tabPath": "currentSmokers",
+  "contentType": "map",
+  "contentTitle": "Smoking Rate and Age-Adjusted Rate of Hospitalizations for COPD, Age 25 and Older",
+  "exportTitle": "Smoking Rate and Age-Adjusted Rate of Hospitalizations for COPD Age 25 and Older",
+  "exportSubtitle": "Percent of population age 25 and older that were current smokers in 2016 and age-adjusted COPD rate per 10k population age 25 and older",
+  "mapSets": [
+    {
+      "set": "primary",
+      "geometry": "County",
+      "outFields": ["County", "Rate", "HousingYear", "Percent_Smokers"],
+      "columnHeaders": [
+        {
+          "field": "County",
+          "headerName": "County",
+          "width": 140,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Rate",
+          "headerName": "Rate",
+          "exportHeaderName": "Rate",
+          "width": 140,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        },
+        {
+          "field": "Percent_Smokers",
+          "headerName": "Smokers (%)",
+          "exportHeaderName": "Percent Current Smokers",
+          "width": 210,
+          "customFormat": 2,
+          "align": "left",
+          "headerAlign": "left"
+        }
+      ],
+      "tableTitle": "Smoking Rate and COPD",
+      "popupContent": {
+        "title": {
+          "field": "FullCounty"
+        },
+        "health": {
+          "name": "COPD hospitalizations per 10,000 population age 25+",
+          "field": "Rate",
+          "unit": ""
+        },
+        "environment": {
+          "name": "Percent of population age 25 and older that smokes",
+          "field": "Percent_Smokers",
+          "unit": "%",
+          "className": "field-value"
+        }
+      },
+      "setLayers": [
+        {
+          "id": "county-point-current-smokers",
+          "zIndexPosition": "front",
+          "title": "Smoking Rate by County",
+          "subtitle": "% of population age 25 and older that were current smokers (BRFSS)",
+          "yearKey": "BRFSS_Year",
+          "defaultVisible": true,
+          "toggleable": true,
+          "url": "/COPD/MapServer/1"
+        },
+        {
+          "id": "county-choropleth-copd",
+          "sourceLayer": true,
+          "zIndexPosition": "back",
+          "title": "Rate of Hospitalizations for COPD by County",
+          "yearKey": "Year",
+          "subtitle": "Age-adjusted rate per 10,000 population for ages 25 and older",
+          "defaultVisible": true,
+          "url": "/COPD/MapServer/0"
+        }
+      ]
+    }
+  ]
+}
